@@ -16,6 +16,8 @@ import aind_data_schema.models as module
 pp.pprint(module.__dict__)
 aind_models = [v for k, v in module.__dict__.items() if not k.startswith('__')]
 
+
+all_slots = list()
 with open('simple.yml', 'w') as f:
     f.write('classes:\n')
     for model_name, model_module in module.__dict__.items():
@@ -25,6 +27,7 @@ with open('simple.yml', 'w') as f:
                     print(model_data_class)
                     print(model_data_class[1].__mro__)
                     attributes_in_dataclass = list(model_data_class[1].__annotations__.keys())
+                    all_slots += attributes_in_dataclass
                     print(attributes_in_dataclass)
                     if attributes_in_dataclass:
                         f.write(f'  {model_data_class[0]}:\n')
@@ -37,7 +40,7 @@ with open('simple.yml', 'w') as f:
                 except AttributeError as e:
                     print(e)
 
-
+print(f'All slots found: {all_slots}')
 
 
 # print()
