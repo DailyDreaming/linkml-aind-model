@@ -1,0 +1,1027 @@
+classes:
+  AngleValue:
+    is_a: BaseModel
+  FrequencyValue:
+    is_a: BaseModel
+  MassValue:
+    is_a: BaseModel
+  PowerValue:
+    is_a: BaseModel
+  SizeValue:
+    is_a: BaseModel
+  TimeValue:
+    is_a: BaseModel
+  VolumeValue:
+    is_a: BaseModel
+  CcfCoords:
+    is_a: AindModel
+    description: Coordinates in CCF template space
+    class_uri: schema:CcfCoords
+    attributes:
+      ml:
+      ap:
+      dv:
+      unit:
+      ccf_version:
+  Coordinates3d:
+    is_a: AindModel
+    description: Coordinates in a 3D grid
+    class_uri: schema:Coordinates3d
+    attributes:
+      x:
+      y:
+      z:
+      unit:
+  ModuleOrientation2d:
+    is_a: AindModel
+    description: 2D module orientation of an object
+    class_uri: schema:ModuleOrientation2d
+    attributes:
+      arc_angle:
+      module_angle:
+      unit:
+  ModuleOrientation3d:
+    is_a: AindModel
+    description: 3D module orientation of an object
+    class_uri: schema:ModuleOrientation3d
+    attributes:
+      arc_angle:
+      module_angle:
+      rotation_angle:
+      unit:
+  Orientation3d:
+    is_a: AindModel
+    description: 3D orientation of an object
+    class_uri: schema:Orientation3d
+    attributes:
+      pitch:
+      yaw:
+      roll:
+      unit:
+  RelativePosition:
+    is_a: AindModel
+    description: Set of 6 values describing relative position on a rig
+    class_uri: schema:RelativePosition
+    attributes:
+      pitch:
+      yaw:
+      roll:
+      angle_unit:
+      x:
+      y:
+      z:
+      position_unit:
+      coordinate_system:
+  Size2d:
+    is_a: AindModel
+    description: 2D size of an object
+    class_uri: schema:Size2d
+    attributes:
+      width:
+      height:
+      unit:
+  Size3d:
+    is_a: AindModel
+    description: 3D size of an object
+    class_uri: schema:Size3d
+    attributes:
+      width:
+      length:
+      height:
+      unit:
+  Behavior:
+    is_a: _HarpDeviceType
+    description: Behavior
+    class_uri: schema:Behavior
+    attributes:
+      name:
+      whoami:
+  CameraController:
+    is_a: _HarpDeviceType
+    description: Camera Controller
+    class_uri: schema:CameraController
+    attributes:
+      name:
+      whoami:
+  ClockSynchronizer:
+    is_a: _HarpDeviceType
+    description: Clock Synchronizer
+    class_uri: schema:ClockSynchronizer
+    attributes:
+      name:
+      whoami:
+  ConfigDict:
+    is_a: dict
+    description: A TypedDict for configuring Pydantic behaviour.
+    class_uri: schema:ConfigDict
+    attributes:
+      title:
+      str_to_lower:
+      str_to_upper:
+      str_strip_whitespace:
+      str_min_length:
+      str_max_length:
+      extra:
+      frozen:
+      populate_by_name:
+      use_enum_values:
+      validate_assignment:
+      arbitrary_types_allowed:
+      from_attributes:
+      loc_by_alias:
+      alias_generator:
+      ignored_types:
+      allow_inf_nan:
+      json_schema_extra:
+      json_encoders:
+      strict:
+      revalidate_instances:
+      ser_json_timedelta:
+      ser_json_bytes:
+      ser_json_inf_nan:
+      validate_default:
+      validate_return:
+      protected_namespaces:
+      hide_input_in_errors:
+      defer_build:
+      plugin_settings:
+      schema_generator:
+      json_schema_serialization_defaults_required:
+      json_schema_mode_override:
+      coerce_numbers_to_str:
+      regex_engine:
+      validation_error_cause:
+  GenericHarpDevice:
+    is_a: _HarpDeviceType
+    description: Generic Harp Device
+    class_uri: schema:GenericHarpDevice
+    attributes:
+      name:
+      whoami:
+  InputExpander:
+    is_a: _HarpDeviceType
+    description: Input Expander
+    class_uri: schema:InputExpander
+    attributes:
+      name:
+      whoami:
+  LoadCells:
+    is_a: _HarpDeviceType
+    description: Load Cells
+    class_uri: schema:LoadCells
+    attributes:
+      name:
+      whoami:
+  Olfactometer:
+    is_a: _HarpDeviceType
+    description: Olfactometer
+    class_uri: schema:Olfactometer
+    attributes:
+      name:
+      whoami:
+  SoundCard:
+    is_a: _HarpDeviceType
+    description: Sound Card
+    class_uri: schema:SoundCard
+    attributes:
+      name:
+      whoami:
+  Synchronizer:
+    is_a: _HarpDeviceType
+    description: Synchronizer
+    class_uri: schema:Synchronizer
+    attributes:
+      name:
+      whoami:
+  TimestampGeneratorGen1:
+    is_a: _HarpDeviceType
+    description: Timestamp Generator Gen 1
+    class_uri: schema:TimestampGeneratorGen1
+    attributes:
+      name:
+      whoami:
+  TimestampGeneratorGen3:
+    is_a: _HarpDeviceType
+    description: Timestamp Generator Gen 3
+    class_uri: schema:TimestampGeneratorGen3
+    attributes:
+      name:
+      whoami:
+  _HarpDeviceType:
+    is_a: BaseModel
+    description: Base model config
+    class_uri: schema:_HarpDeviceType
+    attributes:
+      name:
+      whoami:
+  BaseName:
+    is_a: AindModel
+    description: A simple model associating a name with an abbreviation
+    class_uri: schema:BaseName
+    attributes:
+      name:
+      abbreviation:
+  PIDName:
+    is_a: BaseName
+    description: Model for associate a name with a persistent identifier (PID),
+    the registry for that PID, and abbreviation for that registry
+    class_uri: schema:PIDName
+    attributes:
+      registry:
+      registry_identifier:
+  Addgene:
+    is_a: _Registry
+    description: Addgene
+    class_uri: schema:Addgene
+    attributes:
+      name:
+      abbreviation:
+  BaseName:
+    is_a: AindModel
+    description: A simple model associating a name with an abbreviation
+    class_uri: schema:BaseName
+    attributes:
+      name:
+      abbreviation:
+  ConfigDict:
+    is_a: dict
+    description: A TypedDict for configuring Pydantic behaviour.
+    class_uri: schema:ConfigDict
+    attributes:
+      title:
+      str_to_lower:
+      str_to_upper:
+      str_strip_whitespace:
+      str_min_length:
+      str_max_length:
+      extra:
+      frozen:
+      populate_by_name:
+      use_enum_values:
+      validate_assignment:
+      arbitrary_types_allowed:
+      from_attributes:
+      loc_by_alias:
+      alias_generator:
+      ignored_types:
+      allow_inf_nan:
+      json_schema_extra:
+      json_encoders:
+      strict:
+      revalidate_instances:
+      ser_json_timedelta:
+      ser_json_bytes:
+      ser_json_inf_nan:
+      validate_default:
+      validate_return:
+      protected_namespaces:
+      hide_input_in_errors:
+      defer_build:
+      plugin_settings:
+      schema_generator:
+      json_schema_serialization_defaults_required:
+      json_schema_mode_override:
+      coerce_numbers_to_str:
+      regex_engine:
+      validation_error_cause:
+  MouseGenomeInformatics:
+    is_a: _Registry
+    description: MouseGenomeInformatics
+    class_uri: schema:MouseGenomeInformatics
+    attributes:
+      name:
+      abbreviation:
+  NationalCenterForBiotechnologyInformation:
+    is_a: _Registry
+    description: NationalCenterForBiotechnologyInformation
+    class_uri: schema:NationalCenterForBiotechnologyInformation
+    attributes:
+      name:
+      abbreviation:
+  ResearchOrganizationRegistry:
+    is_a: _Registry
+    description: ResearchOrganizationRegistry
+    class_uri: schema:ResearchOrganizationRegistry
+    attributes:
+      name:
+      abbreviation:
+  ResearchResourceIdentifiers:
+    is_a: _Registry
+    description: ResearchResourceIdentifiers
+    class_uri: schema:ResearchResourceIdentifiers
+    attributes:
+      name:
+      abbreviation:
+  AAOptoElectronic:
+    is_a: _Organization
+    description: AAOptoElectronic
+    class_uri: schema:AAOptoElectronic
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Abcam:
+    is_a: _Organization
+    description: Abcam
+    class_uri: schema:Abcam
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  AilipuTechnologyCo:
+    is_a: _Organization
+    description: AilipuTechnologyCo
+    class_uri: schema:AilipuTechnologyCo
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  AllenInstitute:
+    is_a: _Organization
+    description: AllenInstitute
+    class_uri: schema:AllenInstitute
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  AllenInstituteForBrainScience:
+    is_a: _Organization
+    description: AllenInstituteForBrainScience
+    class_uri: schema:AllenInstituteForBrainScience
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  AllenInstituteForNeuralDynamics:
+    is_a: _Organization
+    description: AllenInstituteForNeuralDynamics
+    class_uri: schema:AllenInstituteForNeuralDynamics
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Allied:
+    is_a: _Organization
+    description: Allied
+    class_uri: schema:Allied
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  AmsOsram:
+    is_a: _Organization
+    description: ams OSRAM
+    class_uri: schema:AmsOsram
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  AppliedScientificInstrumentation:
+    is_a: _Organization
+    description: AppliedScientificInstrumentation
+    class_uri: schema:AppliedScientificInstrumentation
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  ArecontVisionCostar:
+    is_a: _Organization
+    description: ArecontVisionCostar
+    class_uri: schema:ArecontVisionCostar
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Asus:
+    is_a: _Organization
+    description: Asus
+    class_uri: schema:Asus
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Basler:
+    is_a: _Organization
+    description: Basler
+    class_uri: schema:Basler
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  CambridgeTechnology:
+    is_a: _Organization
+    description: CambridgeTechnology
+    class_uri: schema:CambridgeTechnology
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  CarlZeiss:
+    is_a: _Organization
+    description: CarlZeiss
+    class_uri: schema:CarlZeiss
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  ChampalimaudFoundation:
+    is_a: _Organization
+    description: Champalimaud Foundation
+    class_uri: schema:ChampalimaudFoundation
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Chroma:
+    is_a: _Organization
+    description: Chroma
+    class_uri: schema:Chroma
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  CoherentScientific:
+    is_a: _Organization
+    description: CoherentScientific
+    class_uri: schema:CoherentScientific
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  ColumbiaUniversity:
+    is_a: _Organization
+    description: ColumbiaUniversity
+    class_uri: schema:ColumbiaUniversity
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Computar:
+    is_a: _Organization
+    description: Computar
+    class_uri: schema:Computar
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  ConfigDict:
+    is_a: dict
+    description: A TypedDict for configuring Pydantic behaviour.
+    class_uri: schema:ConfigDict
+    attributes:
+      title:
+      str_to_lower:
+      str_to_upper:
+      str_strip_whitespace:
+      str_min_length:
+      str_max_length:
+      extra:
+      frozen:
+      populate_by_name:
+      use_enum_values:
+      validate_assignment:
+      arbitrary_types_allowed:
+      from_attributes:
+      loc_by_alias:
+      alias_generator:
+      ignored_types:
+      allow_inf_nan:
+      json_schema_extra:
+      json_encoders:
+      strict:
+      revalidate_instances:
+      ser_json_timedelta:
+      ser_json_bytes:
+      ser_json_inf_nan:
+      validate_default:
+      validate_return:
+      protected_namespaces:
+      hide_input_in_errors:
+      defer_build:
+      plugin_settings:
+      schema_generator:
+      json_schema_serialization_defaults_required:
+      json_schema_mode_override:
+      coerce_numbers_to_str:
+      regex_engine:
+      validation_error_cause:
+  Conoptics:
+    is_a: _Organization
+    description: Conoptics
+    class_uri: schema:Conoptics
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Custom:
+    is_a: _Organization
+    description: Custom
+    class_uri: schema:Custom
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Dodotronic:
+    is_a: _Organization
+    description: Dodotronic
+    class_uri: schema:Dodotronic
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Doric:
+    is_a: _Organization
+    description: Doric
+    class_uri: schema:Doric
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Ealing:
+    is_a: _Organization
+    description: Ealing
+    class_uri: schema:Ealing
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  EdmundOptics:
+    is_a: _Organization
+    description: EdmundOptics
+    class_uri: schema:EdmundOptics
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Euresys:
+    is_a: _Organization
+    description: Euresys
+    class_uri: schema:Euresys
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Fujinon:
+    is_a: _Organization
+    description: Fujinon
+    class_uri: schema:Fujinon
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Hamamatsu:
+    is_a: _Organization
+    description: Hamamatsu
+    class_uri: schema:Hamamatsu
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  HuazhongUniversityOfScienceAndTechnology:
+    is_a: _Organization
+    description: HuazhongUniversityOfScienceAndTechnology
+    class_uri: schema:HuazhongUniversityOfScienceAndTechnology
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  IRRobotCo:
+    is_a: _Organization
+    description: IRRobotCo
+    class_uri: schema:IRRobotCo
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  ISLProductsInternational:
+    is_a: _Organization
+    description: ISLProductsInternational
+    class_uri: schema:ISLProductsInternational
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  InfinityPhotoOptical:
+    is_a: _Organization
+    description: InfinityPhotoOptical
+    class_uri: schema:InfinityPhotoOptical
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  InteruniversityMicroelectronicsCenter:
+    is_a: _Organization
+    description: InteruniversityMicroelectronicsCenter
+    class_uri: schema:InteruniversityMicroelectronicsCenter
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  JacksonLaboratory:
+    is_a: _Organization
+    description: JacksonLaboratory
+    class_uri: schema:JacksonLaboratory
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Julabo:
+    is_a: _Organization
+    description: Julabo
+    class_uri: schema:Julabo
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Leica:
+    is_a: _Organization
+    description: Leica
+    class_uri: schema:Leica
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Lg:
+    is_a: _Organization
+    description: Lg
+    class_uri: schema:Lg
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  LifeCanvas:
+    is_a: _Organization
+    description: LifeCanvas
+    class_uri: schema:LifeCanvas
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  MKSNewport:
+    is_a: _Organization
+    description: MKSNewport
+    class_uri: schema:MKSNewport
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  MeadowlarkOptics:
+    is_a: _Organization
+    description: MeadowlarkOptics
+    class_uri: schema:MeadowlarkOptics
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Mitutuyo:
+    is_a: _Organization
+    description: Mitutuyo
+    class_uri: schema:Mitutuyo
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Mpi:
+    is_a: _Organization
+    description: Mpi
+    class_uri: schema:Mpi
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  NationalInstituteOfNeurologicalDisordersAndStroke:
+    is_a: _Organization
+    description: NationalInstituteOfNeurologicalDisordersAndStroke
+    class_uri: schema:NationalInstituteOfNeurologicalDisordersAndStroke
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  NationalInstruments:
+    is_a: _Organization
+    description: NationalInstruments
+    class_uri: schema:NationalInstruments
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Navitar:
+    is_a: _Organization
+    description: Navitar
+    class_uri: schema:Navitar
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  NewScaleTechnologies:
+    is_a: _Organization
+    description: NewScaleTechnologies
+    class_uri: schema:NewScaleTechnologies
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  NewYorkUniversity:
+    is_a: _Organization
+    description: NewYorkUniversity
+    class_uri: schema:NewYorkUniversity
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Nikon:
+    is_a: _Organization
+    description: Nikon
+    class_uri: schema:Nikon
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Olympus:
+    is_a: _Organization
+    description: Olympus
+    class_uri: schema:Olympus
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  OpenEphysProductionSite:
+    is_a: _Organization
+    description: OpenEphysProductionSite
+    class_uri: schema:OpenEphysProductionSite
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Optotune:
+    is_a: _Organization
+    description: Optotune
+    class_uri: schema:Optotune
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Other:
+    is_a: _Organization
+    description: Other
+    class_uri: schema:Other
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Oxxius:
+    is_a: _Organization
+    description: Oxxius
+    class_uri: schema:Oxxius
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  PIDName:
+    is_a: BaseName
+    description: Model for associate a name with a persistent identifier (PID),
+    the registry for that PID, and abbreviation for that registry
+    class_uri: schema:PIDName
+    attributes:
+      registry:
+      registry_identifier:
+  Prizmatix:
+    is_a: _Organization
+    description: Prizmatix
+    class_uri: schema:Prizmatix
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Quantifi:
+    is_a: _Organization
+    description: Quantifi
+    class_uri: schema:Quantifi
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  RaspberryPi:
+    is_a: _Organization
+    description: RaspberryPi
+    class_uri: schema:RaspberryPi
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  ResearchOrganizationRegistry:
+    is_a: _Registry
+    description: ResearchOrganizationRegistry
+    class_uri: schema:ResearchOrganizationRegistry
+    attributes:
+      name:
+      abbreviation:
+  SchneiderKreuznach:
+    is_a: _Organization
+    description: SchneiderKreuznach
+    class_uri: schema:SchneiderKreuznach
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  SecondOrderEffects:
+    is_a: _Organization
+    description: Second Order Effects
+    class_uri: schema:SecondOrderEffects
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Semrock:
+    is_a: _Organization
+    description: Semrock
+    class_uri: schema:Semrock
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  SimonsFoundation:
+    is_a: _Organization
+    description: SimonsFoundation
+    class_uri: schema:SimonsFoundation
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Spinnaker:
+    is_a: _Organization
+    description: Spinnaker
+    class_uri: schema:Spinnaker
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  TMC:
+    is_a: _Organization
+    description: TMC
+    class_uri: schema:TMC
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Tamron:
+    is_a: _Organization
+    description: Tamron
+    class_uri: schema:Tamron
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  TeledyneFLIR:
+    is_a: _Organization
+    description: TeledyneFLIR
+    class_uri: schema:TeledyneFLIR
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  TheImagingSource:
+    is_a: _Organization
+    description: TheImagingSource
+    class_uri: schema:TheImagingSource
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  TheLeeCompany:
+    is_a: _Organization
+    description: TheLeeCompany
+    class_uri: schema:TheLeeCompany
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Thermofisher:
+    is_a: _Organization
+    description: Thermofisher
+    class_uri: schema:Thermofisher
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Thorlabs:
+    is_a: _Organization
+    description: Thorlabs
+    class_uri: schema:Thorlabs
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Tymphany:
+    is_a: _Organization
+    description: Tymphany
+    class_uri: schema:Tymphany
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Vieworks:
+    is_a: _Organization
+    description: Vieworks
+    class_uri: schema:Vieworks
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  Vortran:
+    is_a: _Organization
+    description: Vortran
+    class_uri: schema:Vortran
+    attributes:
+      name:
+      abbreviation:
+      registry:
+      registry_identifier:
+  PIDName:
+    is_a: BaseName
+    description: Model for associate a name with a persistent identifier (PID),
+    the registry for that PID, and abbreviation for that registry
+    class_uri: schema:PIDName
+    attributes:
+      registry:
+      registry_identifier:
+  Reagent:
+    is_a: AindModel
+    description: Description of reagent used in procedure
+    class_uri: schema:Reagent
+    attributes:
+      name:
+      source:
+      rrid:
+      lot_number:
+      expiration_date:
