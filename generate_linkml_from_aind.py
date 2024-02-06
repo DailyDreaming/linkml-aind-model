@@ -40,7 +40,7 @@ with open('simple.yml', 'w') as f:
                 except AttributeError as e:
                     print(e)
 
-print(f'All slots found: {all_slots}')
+print(f'All slots found: {set(all_slots)}')
 
 
 # print()
