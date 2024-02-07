@@ -1,2 +1,2 @@
 # linkml-aind-model
-A LinkML model translated from the Allen Institute's AIND model
+Translate pydantic-based schemas from python modules to LinkML.
