@@ -2608,7 +2608,7 @@ classes:
     class_uri: schema:_Registry
   AngleValue:
     name: AngleValue
-    description: None
+    description: No description
     is_a: BaseModel
     slots:
     - value
@@ -2616,7 +2616,7 @@ classes:
     class_uri: schema:AngleValue
   FrequencyValue:
     name: FrequencyValue
-    description: None
+    description: No description
     is_a: BaseModel
     slots:
     - value
@@ -2624,7 +2624,7 @@ classes:
     class_uri: schema:FrequencyValue
   MassValue:
     name: MassValue
-    description: None
+    description: No description
     is_a: BaseModel
     slots:
     - value
@@ -2632,7 +2632,7 @@ classes:
     class_uri: schema:MassValue
   PowerValue:
     name: PowerValue
-    description: None
+    description: No description
     is_a: BaseModel
     slots:
     - value
@@ -2640,7 +2640,7 @@ classes:
     class_uri: schema:PowerValue
   SizeValue:
     name: SizeValue
-    description: None
+    description: No description
     is_a: BaseModel
     slots:
     - value
@@ -2648,7 +2648,7 @@ classes:
     class_uri: schema:SizeValue
   TimeValue:
     name: TimeValue
-    description: None
+    description: No description
     is_a: BaseModel
     slots:
     - value
@@ -2656,7 +2656,7 @@ classes:
     class_uri: schema:TimeValue
   VolumeValue:
     name: VolumeValue
-    description: None
+    description: No description
     is_a: BaseModel
     slots:
     - value
