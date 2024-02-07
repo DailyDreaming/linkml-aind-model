@@ -4,69 +4,481 @@ default_prefix: http://example.org/test-schema/
 enums:
   BinMode:
     name: BinMode
+    permissible_values:
+      ADDITIVE:
+        text: ADDITIVE
+        description: Additive
+      AVERAGE:
+        text: AVERAGE
+        description: Average
+      NONE:
+        text: NONE
+        description: None
   CameraChroma:
     name: CameraChroma
+    permissible_values:
+      BW:
+        text: BW
+        description: Monochrome
+      COLOR:
+        text: COLOR
+        description: Color
   CameraTarget:
     name: CameraTarget
+    permissible_values:
+      BODY:
+        text: BODY
+        description: Body
+      BOTTOM:
+        text: BOTTOM
+        description: Bottom
+      BRAIN_SURFACE:
+        text: BRAIN_SURFACE
+        description: Brain surface
+      EYE:
+        text: EYE
+        description: Eye
+      FACE_BOTTOM:
+        text: FACE_BOTTOM
+        description: Face bottom
+      FACE_FORWARD:
+        text: FACE_FORWARD
+        description: Face forward
+      FACE_SIDE:
+        text: FACE_SIDE
+        description: Face side
+      OTHER:
+        text: OTHER
+        description: Other
+      SIDE:
+        text: SIDE
+        description: Side
+      TONGUE:
+        text: TONGUE
+        description: Tongue
   ChannelType:
     name: ChannelType
+    permissible_values:
+      CARRIER:
+        text: CARRIER
+        description: Carrier
+      ODOR:
+        text: ODOR
+        description: Odor
   Cooling:
     name: Cooling
+    permissible_values:
+      AIR:
+        text: AIR
+        description: Air
+      WATER:
+        text: WATER
+        description: Water
   Coupling:
     name: Coupling
+    permissible_values:
+      FREE_SPACE:
+        text: FREE_SPACE
+        description: Free-space
+      MMF:
+        text: MMF
+        description: Multi-mode fiber
+      OTHER:
+        text: OTHER
+        description: Other
+      SMF:
+        text: SMF
+        description: Single-mode fiber
   DaqChannelType:
     name: DaqChannelType
+    permissible_values:
+      AI:
+        text: AI
+        description: Analog Input
+      AO:
+        text: AO
+        description: Analog Output
+      DI:
+        text: DI
+        description: Digital Input
+      DO:
+        text: DO
+        description: Digital Output
   DataInterface:
     name: DataInterface
+    permissible_values:
+      CAMERALINK:
+        text: CAMERALINK
+        description: CameraLink
+      COAX:
+        text: COAX
+        description: Coax
+      ETH:
+        text: ETH
+        description: Ethernet
+      OTHER:
+        text: OTHER
+        description: Other
+      PCIE:
+        text: PCIE
+        description: PCIe
+      PXI:
+        text: PXI
+        description: PXI
+      USB:
+        text: USB
+        description: USB
   DetectorType:
     name: DetectorType
+    permissible_values:
+      CAMERA:
+        text: CAMERA
+        description: Camera
+      OTHER:
+        text: OTHER
+        description: Other
+      PMT:
+        text: PMT
+        description: Photomultiplier Tube
   DeviceDriver:
     name: DeviceDriver
+    permissible_values:
+      NVIDIA:
+        text: NVIDIA
+        description: Nvidia Graphics
+      OPENGL:
+        text: OPENGL
+        description: OpenGL
+      VIMBA:
+        text: VIMBA
+        description: Vimba
   Enum:
     name: Enum
   FerruleMaterial:
     name: FerruleMaterial
+    permissible_values:
+      CERAMIC:
+        text: CERAMIC
+        description: Ceramic
+      STAINLESS_STEEL:
+        text: STAINLESS_STEEL
+        description: Stainless steel
   FilterSize:
     name: FilterSize
+    permissible_values:
+      FILTER_SIZE_25:
+        text: FILTER_SIZE_25
+        description: '25'
+      FILTER_SIZE_32:
+        text: FILTER_SIZE_32
+        description: '32'
   FilterType:
     name: FilterType
+    permissible_values:
+      BANDPASS:
+        text: BANDPASS
+        description: Band pass
+      DICHROIC:
+        text: DICHROIC
+        description: Dichroic
+      LONGPASS:
+        text: LONGPASS
+        description: Long pass
+      MULTIBAND:
+        text: MULTIBAND
+        description: Multiband
+      ND:
+        text: ND
+        description: Neutral density
+      NOTCH:
+        text: NOTCH
+        description: Notch
+      SHORTPASS:
+        text: SHORTPASS
+        description: Short pass
   FrequencyUnit:
     name: FrequencyUnit
+    permissible_values:
+      HZ:
+        text: HZ
+        description: hertz
+      KHZ:
+        text: KHZ
+        description: kilohertz
+      mHZ:
+        text: mHZ
+        description: millihertz
   ImagingDeviceType:
     name: ImagingDeviceType
+    permissible_values:
+      BEAM_EXPANDER:
+        text: BEAM_EXPANDER
+        description: Beam expander
+      DIFFUSER:
+        text: DIFFUSER
+        description: Diffuser
+      GALVO:
+        text: GALVO
+        description: Galvo
+      LASER_COMBINER:
+        text: LASER_COMBINER
+        description: Laser combiner
+      LASER_COUPLER:
+        text: LASER_COUPLER
+        description: Laser coupler
+      OBJECTIVE:
+        text: OBJECTIVE
+        description: Objective
+      OTHER:
+        text: OTHER
+        description: Other
+      PRISM:
+        text: PRISM
+        description: Prism
+      ROTATION_MOUNT:
+        text: ROTATION_MOUNT
+        description: Rotation mount
+      SAMPLE_CHAMBER:
+        text: SAMPLE_CHAMBER
+        description: Sample Chamber
+      SLIT:
+        text: SLIT
+        description: Slit
+      TUNABLE_LENS:
+        text: TUNABLE_LENS
+        description: Tunable lens
   ImagingInstrumentType:
     name: ImagingInstrumentType
+    permissible_values:
+      CONFOCAL:
+        text: CONFOCAL
+        description: confocal
+      DISPIM:
+        text: DISPIM
+        description: diSPIM
+      ECEPHYS:
+        text: ECEPHYS
+        description: ecephys
+      EXASPIM:
+        text: EXASPIM
+        description: exaSPIM
+      MESOSPIM:
+        text: MESOSPIM
+        description: mesoSPIM
+      OTHER:
+        text: OTHER
+        description: Other
+      SMARTSPIM:
+        text: SMARTSPIM
+        description: SmartSPIM
+      TWO_PHOTON:
+        text: TWO_PHOTON
+        description: Two photon
   ImmersionMedium:
     name: ImmersionMedium
+    permissible_values:
+      AIR:
+        text: AIR
+        description: air
+      MULTI:
+        text: MULTI
+        description: multi
+      OIL:
+        text: OIL
+        description: oil
+      OTHER:
+        text: OTHER
+        description: other
+      PBS:
+        text: PBS
+        description: PBS
+      WATER:
+        text: WATER
+        description: water
   LensSize:
     name: LensSize
+    permissible_values:
+      LENS_SIZE_1:
+        text: LENS_SIZE_1
+        description: '1'
+      LENS_SIZE_2:
+        text: LENS_SIZE_2
+        description: '2'
   MagneticStrength:
     name: MagneticStrength
+    permissible_values:
+      MRI_14T:
+        text: MRI_14T
+        description: '14'
+      MRI_7T:
+        text: MRI_7T
+        description: '7'
   ObjectiveType:
     name: ObjectiveType
+    permissible_values:
+      PRIMARY:
+        text: PRIMARY
+        description: Primary
+      REMOTE:
+        text: REMOTE
+        description: Remote
   PowerUnit:
     name: PowerUnit
+    permissible_values:
+      MW:
+        text: MW
+        description: milliwatt
+      PERCENT:
+        text: PERCENT
+        description: percent
+      UW:
+        text: UW
+        description: microwatt
   ProbeModel:
     name: ProbeModel
+    permissible_values:
+      MI_ULED_PROBE:
+        text: MI_ULED_PROBE
+        description: Michigan uLED Probe (Version 1)
+      MP_PHOTONIC_V1:
+        text: MP_PHOTONIC_V1
+        description: MPI Photonic Probe (Version 1)
+      NP1:
+        text: NP1
+        description: Neuropixels 1.0
+      NP2_MULTI_SHANK:
+        text: NP2_MULTI_SHANK
+        description: Neuropixels 2.0 (Multi Shank)
+      NP2_QUAD_BASE:
+        text: NP2_QUAD_BASE
+        description: Neuropixels 2.0 (Quad Base)
+      NP2_SINGLE_SHANK:
+        text: NP2_SINGLE_SHANK
+        description: Neuropixels 2.0 (Single Shank)
+      NP_OPTO_DEMONSTRATOR:
+        text: NP_OPTO_DEMONSTRATOR
+        description: Neuropixels Opto (Demonstrator)
+      NP_UHD_FIXED:
+        text: NP_UHD_FIXED
+        description: Neuropixels UHD (Fixed)
+      NP_UHD_SWITCHABLE:
+        text: NP_UHD_SWITCHABLE
+        description: Neuropixels UHD (Switchable)
   ScannerLocation:
     name: ScannerLocation
+    permissible_values:
+      FRED_HUTCH:
+        text: FRED_HUTCH
+        description: Fred Hutch
+      UW_SLU:
+        text: UW_SLU
+        description: UW SLU
   SizeUnit:
     name: SizeUnit
+    permissible_values:
+      CM:
+        text: CM
+        description: centimeter
+      IN:
+        text: IN
+        description: inch
+      M:
+        text: M
+        description: meter
+      MM:
+        text: MM
+        description: millimeter
+      NM:
+        text: NM
+        description: nanometer
+      PX:
+        text: PX
+        description: pixel
+      UM:
+        text: UM
+        description: micrometer
   SpeedUnit:
     name: SpeedUnit
+    permissible_values:
+      RPM:
+        text: RPM
+        description: rotations per minute
   SpoutSide:
     name: SpoutSide
+    permissible_values:
+      CENTER:
+        text: CENTER
+        description: Center
+      LEFT:
+        text: LEFT
+        description: Left
+      OTHER:
+        text: OTHER
+        description: Other
+      RIGHT:
+        text: RIGHT
+        description: Right
   StageAxisDirection:
     name: StageAxisDirection
+    permissible_values:
+      DETECTION_AXIS:
+        text: DETECTION_AXIS
+        description: Detection axis
+      ILLUMINATION_AXIS:
+        text: ILLUMINATION_AXIS
+        description: Illumination axis
+      PERPENDICULAR_AXIS:
+        text: PERPENDICULAR_AXIS
+        description: Perpendicular axis
   StageAxisName:
     name: StageAxisName
+    permissible_values:
+      X:
+        text: X
+        description: X
+      Y:
+        text: Y
+        description: Y
+      Z:
+        text: Z
+        description: Z
   TemperatureUnit:
     name: TemperatureUnit
+    permissible_values:
+      C:
+        text: C
+        description: Celsius
+      K:
+        text: K
+        description: Kelvin
   UnitlessUnit:
     name: UnitlessUnit
+    permissible_values:
+      FC:
+        text: FC
+        description: fraction of cycle
+      PERCENT:
+        text: PERCENT
+        description: percent
 slots:
   device_type:
     name: device_type
+  name:
+    name: name
+  serial_number:
+    name: serial_number
+  manufacturer:
+    name: manufacturer
+  model:
+    name: model
+  path_to_cad:
+    name: path_to_cad
+  port_index:
+    name: port_index
+  additional_settings:
+    name: additional_settings
+  notes:
+    name: notes
   type:
     name: type
   calibration_date:
@@ -79,50 +491,14 @@ slots:
     name: input
   output:
     name: output
-  notes:
-    name: notes
-  camera_assembly_name:
-    name: camera_assembly_name
-  camera_target:
-    name: camera_target
-  camera:
-    name: camera
-  lens:
-    name: lens
-  filter:
-    name: filter
-  position:
-    name: position
-  channel_name:
-    name: channel_name
-  channel_type:
-    name: channel_type
-  port:
-    name: port
-  channel_index:
-    name: channel_index
-  sample_rate:
-    name: sample_rate
-  sample_rate_unit:
-    name: sample_rate_unit
-  event_based_sampling:
-    name: event_based_sampling
-  data_interface:
-    name: data_interface
-  manufacturer:
-    name: manufacturer
-  computer_name:
-    name: computer_name
-  channels:
-    name: channels
-  firmware_version:
-    name: firmware_version
-  hardware_version:
-    name: hardware_version
   detector_type:
     name: detector_type
+  data_interface:
+    name: data_interface
   cooling:
     name: cooling
+  computer_name:
+    name: computer_name
   max_frame_rate:
     name: max_frame_rate
   frame_rate_unit:
@@ -165,18 +541,38 @@ slots:
     name: driver
   driver_version:
     name: driver_version
-  name:
-    name: name
-  serial_number:
-    name: serial_number
-  model:
-    name: model
-  path_to_cad:
-    name: path_to_cad
-  port_index:
-    name: port_index
-  additional_settings:
-    name: additional_settings
+  camera_assembly_name:
+    name: camera_assembly_name
+  camera_target:
+    name: camera_target
+  camera:
+    name: camera
+  lens:
+    name: lens
+  filter:
+    name: filter
+  position:
+    name: position
+  channel_name:
+    name: channel_name
+  channel_type:
+    name: channel_type
+  port:
+    name: port
+  channel_index:
+    name: channel_index
+  sample_rate:
+    name: sample_rate
+  sample_rate_unit:
+    name: sample_rate_unit
+  event_based_sampling:
+    name: event_based_sampling
+  channels:
+    name: channels
+  firmware_version:
+    name: firmware_version
+  hardware_version:
+    name: hardware_version
   max_dmd_patterns:
     name: max_dmd_patterns
   double_bounce_design:
@@ -205,6 +601,10 @@ slots:
     name: line_shear
   line_shear_units:
     name: line_shear_units
+  surface_material:
+    name: surface_material
+  date_surface_replaced:
+    name: date_surface_replaced
   radius:
     name: radius
   radius_unit:
@@ -343,10 +743,6 @@ slots:
     name: travel_unit
   firmware:
     name: firmware
-  surface_material:
-    name: surface_material
-  date_surface_replaced:
-    name: date_surface_replaced
   basestation_firmware_version:
     name: basestation_firmware_version
   bsc_firmware_version:
@@ -470,6 +866,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - type
     class_uri: schema:AdditionalImagingDevice
   AindModel:
@@ -493,6 +897,41 @@ classes:
     name: Camera
     description: Camera Detector
     is_a: Detector
+    slots:
+    - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - detector_type
+    - data_interface
+    - cooling
+    - computer_name
+    - max_frame_rate
+    - frame_rate_unit
+    - immersion
+    - chroma
+    - sensor_width
+    - sensor_height
+    - size_unit
+    - sensor_format
+    - sensor_format_unit
+    - bit_depth
+    - bin_mode
+    - bin_width
+    - bin_height
+    - bin_unit
+    - gain
+    - crop_width
+    - crop_height
+    - crop_unit
+    - recording_software
+    - driver
+    - driver_version
     class_uri: schema:Camera
   CameraAssembly:
     name: CameraAssembly
@@ -526,8 +965,15 @@ classes:
     is_a: Device
     slots:
     - device_type
-    - data_interface
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - data_interface
     - computer_name
     - channels
     - firmware_version
@@ -539,8 +985,15 @@ classes:
     is_a: Device
     slots:
     - device_type
-    - detector_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - detector_type
     - data_interface
     - cooling
     - computer_name
@@ -587,6 +1040,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - max_dmd_patterns
     - double_bounce_design
     - invert_pixel_values
@@ -608,6 +1069,16 @@ classes:
     is_a: MousePlatform
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - surface_material
+    - date_surface_replaced
     - radius
     - radius_unit
     - output
@@ -621,6 +1092,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - size
     - internal_material
     - external_material
@@ -643,6 +1122,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - probe_model
     - lasers
     - headstage
@@ -662,6 +1149,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - core_diameter
     - core_diameter_unit
     - numerical_aperture
@@ -676,8 +1171,15 @@ classes:
     is_a: Device
     slots:
     - device_type
-    - filter_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - filter_type
     - diameter
     - width
     - height
@@ -697,11 +1199,22 @@ classes:
     is_a: DAQDevice
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - data_interface
+    - computer_name
+    - channels
+    - firmware_version
+    - hardware_version
     - harp_device_type
     - core_version
     - tag_version
-    - data_interface
     - is_clock_generator
     class_uri: schema:HarpDevice
   Headstage:
@@ -710,6 +1223,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     class_uri: schema:Headstage
   Lamp:
     name: Lamp
@@ -717,6 +1238,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - wavelength_min
     - wavelength_max
     - wavelength_unit
@@ -730,7 +1259,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - wavelength
     - wavelength_unit
     - maximum_power
@@ -755,7 +1291,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - focal_length
     - focal_length_unit
     - size
@@ -770,7 +1313,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - wavelength
     - wavelength_unit
     class_uri: schema:LightEmittingDiode
@@ -792,7 +1342,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     class_uri: schema:Manipulator
   Monitor:
     name: Monitor
@@ -800,7 +1357,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - refresh_rate
     - width
     - height
@@ -817,6 +1381,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - travel
     - travel_unit
     - firmware
@@ -827,6 +1399,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - surface_material
     - date_surface_replaced
     class_uri: schema:MousePlatform
@@ -836,12 +1416,23 @@ classes:
     is_a: DAQDevice
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - data_interface
+    - computer_name
+    - channels
+    - firmware_version
+    - hardware_version
     - basestation_firmware_version
     - bsc_firmware_version
     - slot
     - ports
-    - data_interface
-    - manufacturer
     class_uri: schema:NeuropixelsBasestation
   Objective:
     name: Objective
@@ -849,6 +1440,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - numerical_aperture
     - magnification
     - immersion
@@ -860,9 +1459,23 @@ classes:
     is_a: HarpDevice
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
-    - harp_device_type
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - data_interface
+    - computer_name
     - channels
+    - firmware_version
+    - hardware_version
+    - harp_device_type
+    - core_version
+    - tag_version
+    - is_clock_generator
     class_uri: schema:Olfactometer
   OlfactometerChannel:
     name: OlfactometerChannel
@@ -880,9 +1493,20 @@ classes:
     is_a: DAQDevice
     slots:
     - device_type
-    - ports
-    - data_interface
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - data_interface
+    - computer_name
+    - channels
+    - firmware_version
+    - hardware_version
+    - ports
     class_uri: schema:OpenEphysAcquisitionBoard
   OpticalTable:
     name: OpticalTable
@@ -890,6 +1514,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - length
     - width
     - table_size_unit
@@ -901,6 +1533,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - core_diameter
     - numerical_aperture
     - photobleaching_date
@@ -911,6 +1551,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - polygonal_scanner
     - on_time
     - off_time
@@ -922,6 +1570,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - speed
     - speed_unit
     - number_faces
@@ -975,12 +1631,19 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - side
     - spout_diameter
     - spout_diameter_unit
     - spout_position
     - solenoid_valve
-    - notes
     class_uri: schema:RewardSpout
   Scanner:
     name: Scanner
@@ -988,6 +1651,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - scanner_location
     - magnetic_strength
     - magnetic_strength_unit
@@ -997,6 +1668,18 @@ classes:
     description: Description of a scanning motorized stages
     is_a: MotorizedStage
     slots:
+    - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - travel
+    - travel_unit
+    - firmware
     - stage_axis_direction
     - stage_axis_name
     class_uri: schema:ScanningStage
@@ -1026,7 +1709,14 @@ classes:
     is_a: Device
     slots:
     - device_type
+    - name
+    - serial_number
     - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
     - position
     class_uri: schema:Speaker
   Treadmill:
@@ -1035,6 +1725,16 @@ classes:
     is_a: MousePlatform
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - surface_material
+    - date_surface_replaced
     - treadmill_width
     - width_unit
     class_uri: schema:Treadmill
@@ -1044,6 +1744,16 @@ classes:
     is_a: MousePlatform
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - surface_material
+    - date_surface_replaced
     - diameter
     - diameter_unit
     class_uri: schema:Tube
@@ -1053,6 +1763,16 @@ classes:
     is_a: MousePlatform
     slots:
     - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - surface_material
+    - date_surface_replaced
     - radius
     - width
     - size_unit
