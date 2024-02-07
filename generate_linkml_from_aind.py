@@ -23,8 +23,7 @@ def get_all_modules(imported_modules: list, root_module_name: str):
 
 
 def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
-    modules = get_all_modules(imported_modules=list(), root_module_name='aind_data_schema.models')
-    for module in modules:
+    for module in get_all_modules(imported_modules=list(), root_module_name='aind_data_schema.models'):
         for class_name, class_object in inspect.getmembers(module, inspect.isclass):
             if issubclass(class_object, enum.Enum):
                 try:
