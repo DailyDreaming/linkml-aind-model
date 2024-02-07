@@ -46,7 +46,7 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str = 'aind_d
             slots=model_data_class[1].model_fields,
             is_a=model_data_class[1].__mro__[1].__name__,
             class_uri=f'schema:{model_data_class[0]}',
-            description=model_data_class[1].__doc__.strip() or "No description"
+            description=model_data_class[1].__doc__.strip() if model_data_class[1].__doc__ else "No description"
         )
     for model_enum in enums_from_module(module):
         enum_class = model_enum[1]
