@@ -43,7 +43,7 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
                     slots=class_object.model_fields,
                     is_a=class_object.__mro__[1].__name__,
                     class_uri=f'schema:{class_name}',
-                    description=model_data_class[1].__doc__.strip() if model_data_class[1].__doc__ else "No description"
+                    description=class_object.__doc__.strip() if class_object.__doc__ else "No description"
                 )
 
 
