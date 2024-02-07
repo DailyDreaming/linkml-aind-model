@@ -1,13 +1,37 @@
-import os
-import sys
-import json
-
 import pprint
+pp = pprint.PrettyPrinter(indent=4)
+
+import importlib
 import inspect
-from aind.src.aind_data_schema.models.devices import Device
+import pydantic
+import enum
+from linkml_runtime.dumpers import yaml_dumper
 
-import aind_data_schema.models as module
+def classes_from_module(module_name: str):
+    module = importlib.import_module(module_name)
+    module_classes = inspect.getmembers(module,
+                                 lambda x: inspect.isclass(x) and
+                                           issubclass(x, pydantic.BaseModel))
+    return module_classes
 
+def enums_from_module(module_name: str):
+    """Get pydantic enums
+
+    Parameters
+    ----------
+    module_name : str
+    """
+    module = importlib.import_module(module_name)
+    module_enums = inspect.getmembers(module,
+                                 lambda x: inspect.isclass(x) and
+                                           issubclass(x, enum.Enum))
+    return module_enums
+
+def write_yaml(module_name: str):
+    for klass in classes_from_module(module_name):
+        pass
+    for enum_obj in enums_from_module(module_name):
+        pass
 
 def main():
     aind_models = [v for k, v in module.__dict__.items() if not k.startswith('__')]
