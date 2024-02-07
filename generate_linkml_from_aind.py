@@ -33,9 +33,8 @@ def write_yaml(module_name: str):
     for enum_obj in enums_from_module(module_name):
         pass
 
-def main():
-    sb = SchemaBuilder('linkml_runtime_template.yml')
-    for model_data_class in classes_from_module('aind_data_schema.models.devices'):
+def populate_schema_builder_from_module(sb: SchemaBuilder, module: str = 'aind_data_schema.models.devices'):
+    for model_data_class in classes_from_module(module):
         sb.add_class(
             model_data_class[0],
             slots=model_data_class[1].__annotations__,
@@ -43,8 +42,17 @@ def main():
             class_uri=f'schema:{model_data_class[0]}',
             description=model_data_class[1].__doc__.strip() or "No description"
         )
-    print(sb)
-    yaml_dumper.dumps(sb.schema)
+    for model_enum in enums_from_module(module):
+        sb.add_enum(model_enum[0])
+
+def main():
+    sb = SchemaBuilder()
+    devices_module = 'aind_data_schema.models.devices'
+    populate_schema_builder_from_module(sb, module=devices_module)
+    yml = yaml_dumper.dumps(sb.schema)
+    with open('simple.yml', 'w') as f:
+        f.write(yml)
+    print(yml)
 
 if __name__ == '__main__':
     main()
