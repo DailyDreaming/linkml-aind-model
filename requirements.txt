@@ -1,2 +1,5 @@
 aind-data-schema
 dandischema
+linkml
+typer
+pytest
