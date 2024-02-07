@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import importlib
 import pydantic
 import enum
@@ -62,11 +64,11 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
 
 
 @app.command()
-def main(root_module_name: str = 'aind_data_schema'):
+def main(root_module_name: str = 'aind_data_schema', output_file: Path = Path('generated_linkml_models/aind.yml')):
     sb = SchemaBuilder()
     populate_schema_builder_from_module(sb, module=root_module_name)
     yml = yaml_dumper.dumps(sb.schema)
-    with open('generated_linkml_models/aind.yml', 'w') as f:
+    with output_file.open('w') as f:
         f.write(yml)
     print('Success!')
 
