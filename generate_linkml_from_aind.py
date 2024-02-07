@@ -4,10 +4,11 @@ import enum
 import inspect
 
 from linkml_runtime import SchemaView
-from linkml_runtime.linkml_model import EnumDefinition
+from linkml_runtime.linkml_model import EnumDefinition, SlotDefinition
 from linkml_runtime.utils.schemaview import PermissibleValue, PermissibleValueText
 from linkml_runtime.utils.schema_builder import SchemaBuilder
 from linkml_runtime.dumpers import yaml_dumper
+from typing import Type, List
 
 
 # BICAN already has linkml here: https://github.com/brain-bican/models/tree/main/linkml-schema
@@ -67,6 +68,45 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
                 populate_enum(sb, class_name, class_object)
             elif issubclass(class_object, pydantic.BaseModel):
                 populate_basemodel(sb, class_name, class_object)
+
+
+def slots_builder_from_model(model: Type[pydantic.BaseModel]) -> List[SlotDefinition]:
+
+    slot_names = model.__annotations__
+
+    if len(slot_names) == 0:
+        return []
+
+    # Generate the Pydandic core schema of the model
+    core_schema = model.__pydantic_core_schema__
+
+    # Find the core schema that represents the model
+    # For some reason, the core schema that represents the model can be nested though
+    # not always
+    model_core_schema = core_schema
+    while True:
+        if model_core_schema['type'] == 'model':
+            break
+        else:
+            model_core_schema = model_core_schema['schema']
+
+    assert model_core_schema['schema']["type"] == 'model-fields'
+
+    # The dictionary of the fields in the model paired with their core schema
+    fields_core_schema = model_core_schema['schema']['fields']
+
+    slots = []
+    for slot_name in slot_names:
+        # The core schema of the field in the Pydantic model corresponding to the slot
+        field_schema = fields_core_schema[slot_name]['schema']
+
+        # todo: more to be done with the slot creation based on the information contained
+        #  in the `field_schema`
+        slot = SlotDefinition(slot_name)
+
+        slots.append(slot)
+
+    return slots
 
 
 def main():
