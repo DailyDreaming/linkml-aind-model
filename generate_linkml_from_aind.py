@@ -2,6 +2,7 @@ import importlib
 import pydantic
 import enum
 import inspect
+import typer
 
 from linkml_runtime import SchemaView
 from linkml_runtime.linkml_model import EnumDefinition
@@ -57,9 +58,9 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
                 populate_basemodel(sb, class_name, class_object)
 
 
-def main():
+def main(root_module_name: str = 'aind_data_schema'):
     sb = SchemaBuilder()
-    populate_schema_builder_from_module(sb, module='aind_data_schema.models')
+    populate_schema_builder_from_module(sb, module=root_module_name)
     yml = yaml_dumper.dumps(sb.schema)
     with open('simple.yml', 'w') as f:
         f.write(yml)
@@ -67,4 +68,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    typer.run(main)
