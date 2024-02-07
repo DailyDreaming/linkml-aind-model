@@ -1,2 +1,3 @@
 linkml
 typer
+pytest

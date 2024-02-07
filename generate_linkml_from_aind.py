@@ -11,6 +11,9 @@ from linkml_runtime.utils.schema_builder import SchemaBuilder
 from linkml_runtime.dumpers import yaml_dumper
 
 
+app = typer.Typer()
+
+
 def get_all_modules(imported_modules: list, root_module_name: str):
     try:
         module = importlib.import_module(root_module_name)
@@ -58,6 +61,7 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
                 populate_basemodel(sb, class_name, class_object)
 
 
+@app.command()
 def main(root_module_name: str = 'aind_data_schema'):
     sb = SchemaBuilder()
     populate_schema_builder_from_module(sb, module=root_module_name)
