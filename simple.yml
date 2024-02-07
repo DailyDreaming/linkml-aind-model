@@ -1,1 +1,1066 @@
+name: test-schema
+id: http://example.org/test-schema
+default_prefix: http://example.org/test-schema/
+enums:
+  BinMode:
+    name: BinMode
+  CameraChroma:
+    name: CameraChroma
+  CameraTarget:
+    name: CameraTarget
+  ChannelType:
+    name: ChannelType
+  Cooling:
+    name: Cooling
+  Coupling:
+    name: Coupling
+  DaqChannelType:
+    name: DaqChannelType
+  DataInterface:
+    name: DataInterface
+  DetectorType:
+    name: DetectorType
+  DeviceDriver:
+    name: DeviceDriver
+  Enum:
+    name: Enum
+  FerruleMaterial:
+    name: FerruleMaterial
+  FilterSize:
+    name: FilterSize
+  FilterType:
+    name: FilterType
+  FrequencyUnit:
+    name: FrequencyUnit
+  ImagingDeviceType:
+    name: ImagingDeviceType
+  ImagingInstrumentType:
+    name: ImagingInstrumentType
+  ImmersionMedium:
+    name: ImmersionMedium
+  LensSize:
+    name: LensSize
+  MagneticStrength:
+    name: MagneticStrength
+  ObjectiveType:
+    name: ObjectiveType
+  PowerUnit:
+    name: PowerUnit
+  ProbeModel:
+    name: ProbeModel
+  ScannerLocation:
+    name: ScannerLocation
+  SizeUnit:
+    name: SizeUnit
+  SpeedUnit:
+    name: SpeedUnit
+  SpoutSide:
+    name: SpoutSide
+  StageAxisDirection:
+    name: StageAxisDirection
+  StageAxisName:
+    name: StageAxisName
+  TemperatureUnit:
+    name: TemperatureUnit
+  UnitlessUnit:
+    name: UnitlessUnit
+slots:
+  device_type:
+    name: device_type
+  type:
+    name: type
+  calibration_date:
+    name: calibration_date
+  device_name:
+    name: device_name
+  description:
+    name: description
+  input:
+    name: input
+  output:
+    name: output
+  notes:
+    name: notes
+  camera_assembly_name:
+    name: camera_assembly_name
+  camera_target:
+    name: camera_target
+  camera:
+    name: camera
+  lens:
+    name: lens
+  filter:
+    name: filter
+  position:
+    name: position
+  channel_name:
+    name: channel_name
+  channel_type:
+    name: channel_type
+  port:
+    name: port
+  channel_index:
+    name: channel_index
+  sample_rate:
+    name: sample_rate
+  sample_rate_unit:
+    name: sample_rate_unit
+  event_based_sampling:
+    name: event_based_sampling
+  data_interface:
+    name: data_interface
+  manufacturer:
+    name: manufacturer
+  computer_name:
+    name: computer_name
+  channels:
+    name: channels
+  firmware_version:
+    name: firmware_version
+  hardware_version:
+    name: hardware_version
+  detector_type:
+    name: detector_type
+  cooling:
+    name: cooling
+  max_frame_rate:
+    name: max_frame_rate
+  frame_rate_unit:
+    name: frame_rate_unit
+  immersion:
+    name: immersion
+  chroma:
+    name: chroma
+  sensor_width:
+    name: sensor_width
+  sensor_height:
+    name: sensor_height
+  size_unit:
+    name: size_unit
+  sensor_format:
+    name: sensor_format
+  sensor_format_unit:
+    name: sensor_format_unit
+  bit_depth:
+    name: bit_depth
+  bin_mode:
+    name: bin_mode
+  bin_width:
+    name: bin_width
+  bin_height:
+    name: bin_height
+  bin_unit:
+    name: bin_unit
+  gain:
+    name: gain
+  crop_width:
+    name: crop_width
+  crop_height:
+    name: crop_height
+  crop_unit:
+    name: crop_unit
+  recording_software:
+    name: recording_software
+  driver:
+    name: driver
+  driver_version:
+    name: driver_version
+  name:
+    name: name
+  serial_number:
+    name: serial_number
+  model:
+    name: model
+  path_to_cad:
+    name: path_to_cad
+  port_index:
+    name: port_index
+  additional_settings:
+    name: additional_settings
+  max_dmd_patterns:
+    name: max_dmd_patterns
+  double_bounce_design:
+    name: double_bounce_design
+  invert_pixel_values:
+    name: invert_pixel_values
+  motion_padding_x:
+    name: motion_padding_x
+  motion_padding_y:
+    name: motion_padding_y
+  padding_unit:
+    name: padding_unit
+  pixel_size:
+    name: pixel_size
+  pixel_size_unit:
+    name: pixel_size_unit
+  start_phase:
+    name: start_phase
+  dmd_flip:
+    name: dmd_flip
+  dmd_curtain:
+    name: dmd_curtain
+  dmd_curtain_unit:
+    name: dmd_curtain_unit
+  line_shear:
+    name: line_shear
+  line_shear_units:
+    name: line_shear_units
+  radius:
+    name: radius
+  radius_unit:
+    name: radius_unit
+  encoder:
+    name: encoder
+  decoder:
+    name: decoder
+  encoder_firmware:
+    name: encoder_firmware
+  size:
+    name: size
+  internal_material:
+    name: internal_material
+  external_material:
+    name: external_material
+  grounded:
+    name: grounded
+  laser_interlock:
+    name: laser_interlock
+  air_filtration:
+    name: air_filtration
+  ephys_assembly_name:
+    name: ephys_assembly_name
+  manipulator:
+    name: manipulator
+  probes:
+    name: probes
+  probe_model:
+    name: probe_model
+  lasers:
+    name: lasers
+  headstage:
+    name: headstage
+  fiber_assembly_name:
+    name: fiber_assembly_name
+  fibers:
+    name: fibers
+  core_diameter:
+    name: core_diameter
+  core_diameter_unit:
+    name: core_diameter_unit
+  numerical_aperture:
+    name: numerical_aperture
+  ferrule_material:
+    name: ferrule_material
+  active_length:
+    name: active_length
+  total_length:
+    name: total_length
+  length_unit:
+    name: length_unit
+  filter_type:
+    name: filter_type
+  diameter:
+    name: diameter
+  width:
+    name: width
+  height:
+    name: height
+  thickness:
+    name: thickness
+  thickness_unit:
+    name: thickness_unit
+  filter_wheel_index:
+    name: filter_wheel_index
+  cut_off_wavelength:
+    name: cut_off_wavelength
+  cut_on_wavelength:
+    name: cut_on_wavelength
+  center_wavelength:
+    name: center_wavelength
+  wavelength_unit:
+    name: wavelength_unit
+  harp_device_type:
+    name: harp_device_type
+  core_version:
+    name: core_version
+  tag_version:
+    name: tag_version
+  is_clock_generator:
+    name: is_clock_generator
+  wavelength_min:
+    name: wavelength_min
+  wavelength_max:
+    name: wavelength_max
+  temperature:
+    name: temperature
+  temperature_unit:
+    name: temperature_unit
+  wavelength:
+    name: wavelength
+  maximum_power:
+    name: maximum_power
+  power_unit:
+    name: power_unit
+  coupling:
+    name: coupling
+  coupling_efficiency:
+    name: coupling_efficiency
+  coupling_efficiency_unit:
+    name: coupling_efficiency_unit
+  item_number:
+    name: item_number
+  laser_assembly_name:
+    name: laser_assembly_name
+  focal_length:
+    name: focal_length
+  focal_length_unit:
+    name: focal_length_unit
+  lens_size_unit:
+    name: lens_size_unit
+  optimized_wavelength_range:
+    name: optimized_wavelength_range
+  max_aperture:
+    name: max_aperture
+  maintenance_date:
+    name: maintenance_date
+  protocol_id:
+    name: protocol_id
+  reagents:
+    name: reagents
+  refresh_rate:
+    name: refresh_rate
+  viewing_distance:
+    name: viewing_distance
+  viewing_distance_unit:
+    name: viewing_distance_unit
+  contrast:
+    name: contrast
+  brightness:
+    name: brightness
+  travel:
+    name: travel
+  travel_unit:
+    name: travel_unit
+  firmware:
+    name: firmware
+  surface_material:
+    name: surface_material
+  date_surface_replaced:
+    name: date_surface_replaced
+  basestation_firmware_version:
+    name: basestation_firmware_version
+  bsc_firmware_version:
+    name: bsc_firmware_version
+  slot:
+    name: slot
+  ports:
+    name: ports
+  magnification:
+    name: magnification
+  objective_type:
+    name: objective_type
+  flow_capacity:
+    name: flow_capacity
+  flow_unit:
+    name: flow_unit
+  length:
+    name: length
+  table_size_unit:
+    name: table_size_unit
+  vibration_control:
+    name: vibration_control
+  photobleaching_date:
+    name: photobleaching_date
+  polygonal_scanner:
+    name: polygonal_scanner
+  on_time:
+    name: on_time
+  off_time:
+    name: off_time
+  time_setting_unit:
+    name: time_setting_unit
+  speed:
+    name: speed
+  speed_unit:
+    name: speed_unit
+  number_faces:
+    name: number_faces
+  index:
+    name: index
+  source:
+    name: source
+  rrid:
+    name: rrid
+  lot_number:
+    name: lot_number
+  expiration_date:
+    name: expiration_date
+  pitch:
+    name: pitch
+  yaw:
+    name: yaw
+  roll:
+    name: roll
+  angle_unit:
+    name: angle_unit
+  x:
+    name: x
+  y:
+    name: y
+  z:
+    name: z
+  position_unit:
+    name: position_unit
+  coordinate_system:
+    name: coordinate_system
+  stage_type:
+    name: stage_type
+  reward_spouts:
+    name: reward_spouts
+  side:
+    name: side
+  spout_diameter:
+    name: spout_diameter
+  spout_diameter_unit:
+    name: spout_diameter_unit
+  spout_position:
+    name: spout_position
+  solenoid_valve:
+    name: solenoid_valve
+  scanner_location:
+    name: scanner_location
+  magnetic_strength:
+    name: magnetic_strength
+  magnetic_strength_unit:
+    name: magnetic_strength_unit
+  stage_axis_direction:
+    name: stage_axis_direction
+  stage_axis_name:
+    name: stage_axis_name
+  unit:
+    name: unit
+  version:
+    name: version
+  url:
+    name: url
+  parameters:
+    name: parameters
+  treadmill_width:
+    name: treadmill_width
+  width_unit:
+    name: width_unit
+  diameter_unit:
+    name: diameter_unit
+  encoder_output:
+    name: encoder_output
+  pulse_per_revolution:
+    name: pulse_per_revolution
+  magnetic_brake:
+    name: magnetic_brake
+  brake_output:
+    name: brake_output
+  torque_sensor:
+    name: torque_sensor
+  torque_output:
+    name: torque_output
 classes:
+  AdditionalImagingDevice:
+    name: AdditionalImagingDevice
+    description: Description of additional devices
+    is_a: Device
+    slots:
+    - device_type
+    - type
+    class_uri: schema:AdditionalImagingDevice
+  AindModel:
+    name: AindModel
+    description: BaseModel that disallows extra fields
+    is_a: BaseModel
+    class_uri: schema:AindModel
+  Calibration:
+    name: Calibration
+    description: Generic calibration class
+    is_a: AindModel
+    slots:
+    - calibration_date
+    - device_name
+    - description
+    - input
+    - output
+    - notes
+    class_uri: schema:Calibration
+  Camera:
+    name: Camera
+    description: Camera Detector
+    is_a: Detector
+    class_uri: schema:Camera
+  CameraAssembly:
+    name: CameraAssembly
+    description: Named assembly of a camera and lens (and optionally a filter)
+    is_a: AindModel
+    slots:
+    - camera_assembly_name
+    - camera_target
+    - camera
+    - lens
+    - filter
+    - position
+    class_uri: schema:CameraAssembly
+  DAQChannel:
+    name: DAQChannel
+    description: Named input or output channel on a DAQ device
+    is_a: AindModel
+    slots:
+    - channel_name
+    - device_name
+    - channel_type
+    - port
+    - channel_index
+    - sample_rate
+    - sample_rate_unit
+    - event_based_sampling
+    class_uri: schema:DAQChannel
+  DAQDevice:
+    name: DAQDevice
+    description: Data acquisition device containing multiple I/O channels
+    is_a: Device
+    slots:
+    - device_type
+    - data_interface
+    - manufacturer
+    - computer_name
+    - channels
+    - firmware_version
+    - hardware_version
+    class_uri: schema:DAQDevice
+  Detector:
+    name: Detector
+    description: Description of a generic detector
+    is_a: Device
+    slots:
+    - device_type
+    - detector_type
+    - manufacturer
+    - data_interface
+    - cooling
+    - computer_name
+    - max_frame_rate
+    - frame_rate_unit
+    - immersion
+    - chroma
+    - sensor_width
+    - sensor_height
+    - size_unit
+    - sensor_format
+    - sensor_format_unit
+    - bit_depth
+    - bin_mode
+    - bin_width
+    - bin_height
+    - bin_unit
+    - gain
+    - crop_width
+    - crop_height
+    - crop_unit
+    - recording_software
+    - driver
+    - driver_version
+    class_uri: schema:Detector
+  Device:
+    name: Device
+    description: Generic device
+    is_a: AindModel
+    slots:
+    - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    class_uri: schema:Device
+  DigitalMicromirrorDevice:
+    name: DigitalMicromirrorDevice
+    description: Description of a Digital Micromirror Device (DMD)
+    is_a: Device
+    slots:
+    - device_type
+    - max_dmd_patterns
+    - double_bounce_design
+    - invert_pixel_values
+    - motion_padding_x
+    - motion_padding_y
+    - padding_unit
+    - pixel_size
+    - pixel_size_unit
+    - start_phase
+    - dmd_flip
+    - dmd_curtain
+    - dmd_curtain_unit
+    - line_shear
+    - line_shear_units
+    class_uri: schema:DigitalMicromirrorDevice
+  Disc:
+    name: Disc
+    description: Description of a running disc (i.e. MindScope Disc)
+    is_a: MousePlatform
+    slots:
+    - device_type
+    - radius
+    - radius_unit
+    - output
+    - encoder
+    - decoder
+    - encoder_firmware
+    class_uri: schema:Disc
+  Enclosure:
+    name: Enclosure
+    description: Description of an enclosure
+    is_a: Device
+    slots:
+    - device_type
+    - size
+    - internal_material
+    - external_material
+    - grounded
+    - laser_interlock
+    - air_filtration
+    class_uri: schema:Enclosure
+  EphysAssembly:
+    name: EphysAssembly
+    description: Module for electrophysiological recording
+    is_a: AindModel
+    slots:
+    - ephys_assembly_name
+    - manipulator
+    - probes
+    class_uri: schema:EphysAssembly
+  EphysProbe:
+    name: EphysProbe
+    description: Named probe used in an ephys experiment
+    is_a: Device
+    slots:
+    - device_type
+    - probe_model
+    - lasers
+    - headstage
+    class_uri: schema:EphysProbe
+  FiberAssembly:
+    name: FiberAssembly
+    description: Module for inserted fiber photometry recording
+    is_a: AindModel
+    slots:
+    - fiber_assembly_name
+    - manipulator
+    - fibers
+    class_uri: schema:FiberAssembly
+  FiberProbe:
+    name: FiberProbe
+    description: Description of a fiber optic probe
+    is_a: Device
+    slots:
+    - device_type
+    - core_diameter
+    - core_diameter_unit
+    - numerical_aperture
+    - ferrule_material
+    - active_length
+    - total_length
+    - length_unit
+    class_uri: schema:FiberProbe
+  Filter:
+    name: Filter
+    description: Filter used in a light path
+    is_a: Device
+    slots:
+    - device_type
+    - filter_type
+    - manufacturer
+    - diameter
+    - width
+    - height
+    - size_unit
+    - thickness
+    - thickness_unit
+    - filter_wheel_index
+    - cut_off_wavelength
+    - cut_on_wavelength
+    - center_wavelength
+    - wavelength_unit
+    - description
+    class_uri: schema:Filter
+  HarpDevice:
+    name: HarpDevice
+    description: DAQ that uses the Harp protocol for synchronization and data transmission
+    is_a: DAQDevice
+    slots:
+    - device_type
+    - manufacturer
+    - harp_device_type
+    - core_version
+    - tag_version
+    - data_interface
+    - is_clock_generator
+    class_uri: schema:HarpDevice
+  Headstage:
+    name: Headstage
+    description: Headstage used with an ephys probe
+    is_a: Device
+    slots:
+    - device_type
+    class_uri: schema:Headstage
+  Lamp:
+    name: Lamp
+    description: Description of a Lamp lightsource
+    is_a: Device
+    slots:
+    - device_type
+    - wavelength_min
+    - wavelength_max
+    - wavelength_unit
+    - temperature
+    - temperature_unit
+    class_uri: schema:Lamp
+  Laser:
+    name: Laser
+    description: Laser module with a specific wavelength (may be a sub-component of
+      a larger assembly)
+    is_a: Device
+    slots:
+    - device_type
+    - manufacturer
+    - wavelength
+    - wavelength_unit
+    - maximum_power
+    - power_unit
+    - coupling
+    - coupling_efficiency
+    - coupling_efficiency_unit
+    - item_number
+    class_uri: schema:Laser
+  LaserAssembly:
+    name: LaserAssembly
+    description: Assembly for optogenetic stimulation
+    is_a: AindModel
+    slots:
+    - laser_assembly_name
+    - manipulator
+    - lasers
+    class_uri: schema:LaserAssembly
+  Lens:
+    name: Lens
+    description: Lens
+    is_a: Device
+    slots:
+    - device_type
+    - manufacturer
+    - focal_length
+    - focal_length_unit
+    - size
+    - lens_size_unit
+    - optimized_wavelength_range
+    - wavelength_unit
+    - max_aperture
+    class_uri: schema:Lens
+  LightEmittingDiode:
+    name: LightEmittingDiode
+    description: Description of a Light Emitting Diode (LED) device
+    is_a: Device
+    slots:
+    - device_type
+    - manufacturer
+    - wavelength
+    - wavelength_unit
+    class_uri: schema:LightEmittingDiode
+  Maintenance:
+    name: Maintenance
+    description: Generic maintenance class
+    is_a: AindModel
+    slots:
+    - maintenance_date
+    - device_name
+    - description
+    - protocol_id
+    - reagents
+    - notes
+    class_uri: schema:Maintenance
+  Manipulator:
+    name: Manipulator
+    description: Manipulator used on a dome module
+    is_a: Device
+    slots:
+    - device_type
+    - manufacturer
+    class_uri: schema:Manipulator
+  Monitor:
+    name: Monitor
+    description: Description of visual display for visual stimuli
+    is_a: Device
+    slots:
+    - device_type
+    - manufacturer
+    - refresh_rate
+    - width
+    - height
+    - size_unit
+    - viewing_distance
+    - viewing_distance_unit
+    - position
+    - contrast
+    - brightness
+    class_uri: schema:Monitor
+  MotorizedStage:
+    name: MotorizedStage
+    description: Description of motorized stage
+    is_a: Device
+    slots:
+    - device_type
+    - travel
+    - travel_unit
+    - firmware
+    class_uri: schema:MotorizedStage
+  MousePlatform:
+    name: MousePlatform
+    description: Description of a mouse platform
+    is_a: Device
+    slots:
+    - device_type
+    - surface_material
+    - date_surface_replaced
+    class_uri: schema:MousePlatform
+  NeuropixelsBasestation:
+    name: NeuropixelsBasestation
+    description: PXI-based Neuropixels DAQ
+    is_a: DAQDevice
+    slots:
+    - device_type
+    - basestation_firmware_version
+    - bsc_firmware_version
+    - slot
+    - ports
+    - data_interface
+    - manufacturer
+    class_uri: schema:NeuropixelsBasestation
+  Objective:
+    name: Objective
+    description: Description of an objective device
+    is_a: Device
+    slots:
+    - device_type
+    - numerical_aperture
+    - magnification
+    - immersion
+    - objective_type
+    class_uri: schema:Objective
+  Olfactometer:
+    name: Olfactometer
+    description: Description of an olfactometer for odor stimuli
+    is_a: HarpDevice
+    slots:
+    - device_type
+    - manufacturer
+    - harp_device_type
+    - channels
+    class_uri: schema:Olfactometer
+  OlfactometerChannel:
+    name: OlfactometerChannel
+    description: description of a Olfactometer channel
+    is_a: AindModel
+    slots:
+    - channel_index
+    - channel_type
+    - flow_capacity
+    - flow_unit
+    class_uri: schema:OlfactometerChannel
+  OpenEphysAcquisitionBoard:
+    name: OpenEphysAcquisitionBoard
+    description: Multichannel electrophysiology DAQ
+    is_a: DAQDevice
+    slots:
+    - device_type
+    - ports
+    - data_interface
+    - manufacturer
+    class_uri: schema:OpenEphysAcquisitionBoard
+  OpticalTable:
+    name: OpticalTable
+    description: Description of Optical Table
+    is_a: Device
+    slots:
+    - device_type
+    - length
+    - width
+    - table_size_unit
+    - vibration_control
+    class_uri: schema:OpticalTable
+  Patch:
+    name: Patch
+    description: Description of a patch cord
+    is_a: Device
+    slots:
+    - device_type
+    - core_diameter
+    - numerical_aperture
+    - photobleaching_date
+    class_uri: schema:Patch
+  PockelsCell:
+    name: PockelsCell
+    description: Description of a Pockels Cell
+    is_a: Device
+    slots:
+    - device_type
+    - polygonal_scanner
+    - on_time
+    - off_time
+    - time_setting_unit
+    class_uri: schema:PockelsCell
+  PolygonalScanner:
+    name: PolygonalScanner
+    description: Description of a Polygonal scanner
+    is_a: Device
+    slots:
+    - device_type
+    - speed
+    - speed_unit
+    - number_faces
+    class_uri: schema:PolygonalScanner
+  ProbePort:
+    name: ProbePort
+    description: Port for a probe connection
+    is_a: AindModel
+    slots:
+    - index
+    - probes
+    class_uri: schema:ProbePort
+  Reagent:
+    name: Reagent
+    description: Description of reagent used in procedure
+    is_a: AindModel
+    slots:
+    - name
+    - source
+    - rrid
+    - lot_number
+    - expiration_date
+    class_uri: schema:Reagent
+  RelativePosition:
+    name: RelativePosition
+    description: Set of 6 values describing relative position on a rig
+    is_a: AindModel
+    slots:
+    - pitch
+    - yaw
+    - roll
+    - angle_unit
+    - x
+    - y
+    - z
+    - position_unit
+    - coordinate_system
+    class_uri: schema:RelativePosition
+  RewardDelivery:
+    name: RewardDelivery
+    description: Description of reward delivery system
+    is_a: AindModel
+    slots:
+    - device_type
+    - stage_type
+    - reward_spouts
+    class_uri: schema:RewardDelivery
+  RewardSpout:
+    name: RewardSpout
+    description: Description of a reward spout
+    is_a: Device
+    slots:
+    - device_type
+    - side
+    - spout_diameter
+    - spout_diameter_unit
+    - spout_position
+    - solenoid_valve
+    - notes
+    class_uri: schema:RewardSpout
+  Scanner:
+    name: Scanner
+    description: Description of a MRI Scanner
+    is_a: Device
+    slots:
+    - device_type
+    - scanner_location
+    - magnetic_strength
+    - magnetic_strength_unit
+    class_uri: schema:Scanner
+  ScanningStage:
+    name: ScanningStage
+    description: Description of a scanning motorized stages
+    is_a: MotorizedStage
+    slots:
+    - stage_axis_direction
+    - stage_axis_name
+    class_uri: schema:ScanningStage
+  Size3d:
+    name: Size3d
+    description: 3D size of an object
+    is_a: AindModel
+    slots:
+    - width
+    - length
+    - height
+    - unit
+    class_uri: schema:Size3d
+  Software:
+    name: Software
+    description: Description of generic software
+    is_a: AindModel
+    slots:
+    - name
+    - version
+    - url
+    - parameters
+    class_uri: schema:Software
+  Speaker:
+    name: Speaker
+    description: Description of a speaker for auditory stimuli
+    is_a: Device
+    slots:
+    - device_type
+    - manufacturer
+    - position
+    class_uri: schema:Speaker
+  Treadmill:
+    name: Treadmill
+    description: Description of treadmill platform
+    is_a: MousePlatform
+    slots:
+    - device_type
+    - treadmill_width
+    - width_unit
+    class_uri: schema:Treadmill
+  Tube:
+    name: Tube
+    description: Description of a tube platform
+    is_a: MousePlatform
+    slots:
+    - device_type
+    - diameter
+    - diameter_unit
+    class_uri: schema:Tube
+  Wheel:
+    name: Wheel
+    description: Description of a running wheel
+    is_a: MousePlatform
+    slots:
+    - device_type
+    - radius
+    - width
+    - size_unit
+    - encoder
+    - encoder_output
+    - pulse_per_revolution
+    - magnetic_brake
+    - brake_output
+    - torque_sensor
+    - torque_output
+    class_uri: schema:Wheel
