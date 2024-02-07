@@ -460,11 +460,232 @@ enums:
       PERCENT:
         text: PERCENT
         description: percent
+  ConcentrationUnit:
+    name: ConcentrationUnit
+    permissible_values:
+      M:
+        text: M
+        description: molar
+      MASS_PERCENT:
+        text: MASS_PERCENT
+        description: '% m/m'
+      NM:
+        text: NM
+        description: nanomolar
+      UM:
+        text: UM
+        description: micromolar
+      VOLUME_PERCENT:
+        text: VOLUME_PERCENT
+        description: '% v/v'
+  PulseShape:
+    name: PulseShape
+    permissible_values:
+      RAMP:
+        text: RAMP
+        description: Ramp
+      SINE:
+        text: SINE
+        description: Sinusoidal
+      SQUARE:
+        text: SQUARE
+        description: Square
+  TimeUnit:
+    name: TimeUnit
+    permissible_values:
+      HR:
+        text: HR
+        description: hour
+      M:
+        text: M
+        description: minute
+      MS:
+        text: MS
+        description: millisecond
+      NS:
+        text: NS
+        description: nanosecond
+      S:
+        text: S
+        description: second
+      US:
+        text: US
+        description: microsecond
+  VolumeUnit:
+    name: VolumeUnit
+    permissible_values:
+      L:
+        text: L
+        description: liter
+      ML:
+        text: ML
+        description: milliliter
+      NL:
+        text: NL
+        description: nanoliter
+      UL:
+        text: UL
+        description: microliter
+  AngleUnit:
+    name: AngleUnit
+    permissible_values:
+      DEG:
+        text: DEG
+        description: degrees
+      RAD:
+        text: RAD
+        description: radians
+  CurrentUnit:
+    name: CurrentUnit
+    permissible_values:
+      UA:
+        text: UA
+        description: microamps
+  MassUnit:
+    name: MassUnit
+    permissible_values:
+      G:
+        text: G
+        description: gram
+      KG:
+        text: KG
+        description: kilogram
+      MG:
+        text: MG
+        description: milligram
+      NG:
+        text: NG
+        description: nanogram
+      UG:
+        text: UG
+        description: microgram
+  ProcessName:
+    name: ProcessName
+    permissible_values:
+      ANALYSIS:
+        text: ANALYSIS
+        description: Analysis
+      COMPRESSION:
+        text: COMPRESSION
+        description: Compression
+      DENOISING:
+        text: DENOISING
+        description: Denoising
+      DFF_ESTIMATION:
+        text: DFF_ESTIMATION
+        description: dF/F estimation
+      EPHYS_CURATION:
+        text: EPHYS_CURATION
+        description: Ephys curation
+      EPHYS_POSTPROCESSING:
+        text: EPHYS_POSTPROCESSING
+        description: Ephys postprocessing
+      EPHYS_PREPROCESSING:
+        text: EPHYS_PREPROCESSING
+        description: Ephys preprocessing
+      EPHYS_VISUALIZATION:
+        text: EPHYS_VISUALIZATION
+        description: Ephys visualization
+      FIDUCIAL_SEGMENTATION:
+        text: FIDUCIAL_SEGMENTATION
+        description: Fiducial segmentation
+      FILE_CONVERSION:
+        text: FILE_CONVERSION
+        description: File format conversion
+      FLUORESCENCE_EVENT_DETECTION:
+        text: FLUORESCENCE_EVENT_DETECTION
+        description: Fluorescence event detection
+      IMAGE_ATLAS_ALIGNMENT:
+        text: IMAGE_ATLAS_ALIGNMENT
+        description: Image atlas alignment
+      IMAGE_BACKGROUND_SUBTRACTION:
+        text: IMAGE_BACKGROUND_SUBTRACTION
+        description: Image background subtraction
+      IMAGE_CELL_QUANTIFICATION:
+        text: IMAGE_CELL_QUANTIFICATION
+        description: Image cell quantification
+      IMAGE_CELL_SEGMENTATION:
+        text: IMAGE_CELL_SEGMENTATION
+        description: Image cell segmentation
+      IMAGE_DESTRIPING:
+        text: IMAGE_DESTRIPING
+        description: Image destriping
+      IMAGE_FLATFIELD_CORRECTION:
+        text: IMAGE_FLATFIELD_CORRECTION
+        description: Image flat-field correction
+      IMAGE_IMPORTING:
+        text: IMAGE_IMPORTING
+        description: Image importing
+      IMAGE_THRESHOLDING:
+        text: IMAGE_THRESHOLDING
+        description: Image thresholding
+      IMAGE_TILE_ALIGNMENT:
+        text: IMAGE_TILE_ALIGNMENT
+        description: Image tile alignment
+      IMAGE_TILE_FUSING:
+        text: IMAGE_TILE_FUSING
+        description: Image tile fusing
+      IMAGE_TILE_PROJECTION:
+        text: IMAGE_TILE_PROJECTION
+        description: Image tile projection
+      MANUAL_ANNOTATION:
+        text: MANUAL_ANNOTATION
+        description: Manual annotation
+      NEUROPIL_SUBTRACTION:
+        text: NEUROPIL_SUBTRACTION
+        description: Neuropil subtraction
+      OTHER:
+        text: OTHER
+        description: Other
+      QUALITY_CONTROL_AND_ASSESSMENT:
+        text: QUALITY_CONTROL_AND_ASSESSMENT
+        description: Quality control and assessment
+      REGISTRATION_TO_TEMPLATE:
+        text: REGISTRATION_TO_TEMPLATE
+        description: Registration to template
+      SKULL_STRIPPING:
+        text: SKULL_STRIPPING
+        description: Skull stripping
+      SPATIAL_TIMESERIES_DEMIXING:
+        text: SPATIAL_TIMESERIES_DEMIXING
+        description: Spatial timeseries demixing
+      SPIKE_SORTING:
+        text: SPIKE_SORTING
+        description: Spike sorting
+      VIDEO_MOTION_CORRECTION:
+        text: VIDEO_MOTION_CORRECTION
+        description: Video motion correction
+      VIDEO_PLANE_DECROSSTALK:
+        text: VIDEO_PLANE_DECROSSTALK
+        description: Video plane decrosstalk
+      VIDEO_ROI_CLASSIFICATION:
+        text: VIDEO_ROI_CLASSIFICATION
+        description: Video ROI classification
+      VIDEO_ROI_SEGMENTATION:
+        text: VIDEO_ROI_SEGMENTATION
+        description: Video ROI segmentation
+      VIDEO_ROI_TIMESERIES_EXTRACTION:
+        text: VIDEO_ROI_TIMESERIES_EXTRACTION
+        description: Video ROI timeseries extraction
+  CcfVersion:
+    name: CcfVersion
+    permissible_values:
+      CCFv3:
+        text: CCFv3
+        description: CCFv3
 slots:
-  device_type:
-    name: device_type
   name:
     name: name
+  whoami:
+    name: whoami
+  abbreviation:
+    name: abbreviation
+  registry:
+    name: registry
+  registry_identifier:
+    name: registry_identifier
+  device_type:
+    name: device_type
   serial_number:
     name: serial_number
   manufacturer:
@@ -859,7 +1080,475 @@ slots:
     name: torque_sensor
   torque_output:
     name: torque_output
+  stimulus_type:
+    name: stimulus_type
+  behavior_name:
+    name: behavior_name
+  session_number:
+    name: session_number
+  behavior_software:
+    name: behavior_software
+  behavior_script:
+    name: behavior_script
+  output_parameters:
+    name: output_parameters
+  reward_consumed_during_epoch:
+    name: reward_consumed_during_epoch
+  reward_consumed_unit:
+    name: reward_consumed_unit
+  trials_total:
+    name: trials_total
+  trials_finished:
+    name: trials_finished
+  trials_rewarded:
+    name: trials_rewarded
+  odorant:
+    name: odorant
+  odorant_dilution:
+    name: odorant_dilution
+  odorant_dilution_unit:
+    name: odorant_dilution_unit
+  stimulus_name:
+    name: stimulus_name
+  pulse_shape:
+    name: pulse_shape
+  pulse_frequency:
+    name: pulse_frequency
+  pulse_frequency_unit:
+    name: pulse_frequency_unit
+  number_pulse_trains:
+    name: number_pulse_trains
+  pulse_width:
+    name: pulse_width
+  pulse_width_unit:
+    name: pulse_width_unit
+  pulse_train_duration:
+    name: pulse_train_duration
+  pulse_train_duration_unit:
+    name: pulse_train_duration_unit
+  fixed_pulse_train_interval:
+    name: fixed_pulse_train_interval
+  pulse_train_interval:
+    name: pulse_train_interval
+  pulse_train_interval_unit:
+    name: pulse_train_interval_unit
+  baseline_duration:
+    name: baseline_duration
+  baseline_duration_unit:
+    name: baseline_duration_unit
+  other_parameters:
+    name: other_parameters
+  number_groups:
+    name: number_groups
+  groups:
+    name: groups
+  inter_trial_interval:
+    name: inter_trial_interval
+  inter_trial_interval_unit:
+    name: inter_trial_interval_unit
+  group_index:
+    name: group_index
+  number_of_neurons:
+    name: number_of_neurons
+  stimulation_laser_power:
+    name: stimulation_laser_power
+  stimulation_laser_power_unit:
+    name: stimulation_laser_power_unit
+  number_trials:
+    name: number_trials
+  number_spirals:
+    name: number_spirals
+  spiral_duration:
+    name: spiral_duration
+  spiral_duration_unit:
+    name: spiral_duration_unit
+  inter_spiral_interval:
+    name: inter_spiral_interval
+  inter_spiral_interval_unit:
+    name: inter_spiral_interval_unit
+  stimulus:
+    name: stimulus
+  stimulus_start_time:
+    name: stimulus_start_time
+  stimulus_end_time:
+    name: stimulus_end_time
+  stimulus_parameters:
+    name: stimulus_parameters
+  stimulus_template_name:
+    name: stimulus_template_name
+  stimulus_software:
+    name: stimulus_software
+  stimulus_software_version:
+    name: stimulus_software_version
+  stimulus_script:
+    name: stimulus_script
+  stimulus_script_version:
+    name: stimulus_script_version
+  value:
+    name: value
+  ml:
+    name: ml
+  ap:
+    name: ap
+  dv:
+    name: dv
+  ccf_version:
+    name: ccf_version
+  arc_angle:
+    name: arc_angle
+  module_angle:
+    name: module_angle
+  rotation_angle:
+    name: rotation_angle
 classes:
+  BaseModel:
+    name: BaseModel
+    description: "Usage docs: https://docs.pydantic.dev/2.6/concepts/models/\n\n \
+      \   A base class for creating Pydantic models.\n\n    Attributes:\n        __class_vars__:\
+      \ The names of classvars defined on the model.\n        __private_attributes__:\
+      \ Metadata about the private attributes of the model.\n        __signature__:\
+      \ The signature for instantiating the model.\n\n        __pydantic_complete__:\
+      \ Whether model building is completed, or if there are still undefined fields.\n\
+      \        __pydantic_core_schema__: The pydantic-core schema used to build the\
+      \ SchemaValidator and SchemaSerializer.\n        __pydantic_custom_init__: Whether\
+      \ the model has a custom `__init__` function.\n        __pydantic_decorators__:\
+      \ Metadata containing the decorators defined on the model.\n            This\
+      \ replaces `Model.__validators__` and `Model.__root_validators__` from Pydantic\
+      \ V1.\n        __pydantic_generic_metadata__: Metadata for generic models; contains\
+      \ data used for a similar purpose to\n            __args__, __origin__, __parameters__\
+      \ in typing-module generics. May eventually be replaced by these.\n        __pydantic_parent_namespace__:\
+      \ Parent namespace of the model, used for automatic rebuilding of models.\n\
+      \        __pydantic_post_init__: The name of the post-init method for the model,\
+      \ if defined.\n        __pydantic_root_model__: Whether the model is a `RootModel`.\n\
+      \        __pydantic_serializer__: The pydantic-core SchemaSerializer used to\
+      \ dump instances of the model.\n        __pydantic_validator__: The pydantic-core\
+      \ SchemaValidator used to validate instances of the model.\n\n        __pydantic_extra__:\
+      \ An instance attribute with the values of extra fields from validation when\n\
+      \            `model_config['extra'] == 'allow'`.\n        __pydantic_fields_set__:\
+      \ An instance attribute with the names of fields explicitly set.\n        __pydantic_private__:\
+      \ Instance attribute with the values of private attributes set on the model\
+      \ instance."
+    is_a: object
+    class_uri: schema:BaseModel
+  Behavior:
+    name: Behavior
+    description: Behavior
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Behavior
+  CameraController:
+    name: CameraController
+    description: Camera Controller
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:CameraController
+  ClockSynchronizer:
+    name: ClockSynchronizer
+    description: Clock Synchronizer
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:ClockSynchronizer
+  GenericHarpDevice:
+    name: GenericHarpDevice
+    description: Generic Harp Device
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:GenericHarpDevice
+  InputExpander:
+    name: InputExpander
+    description: Input Expander
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:InputExpander
+  LoadCells:
+    name: LoadCells
+    description: Load Cells
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:LoadCells
+  Olfactometer:
+    name: Olfactometer
+    description: Description of an olfactometer for odor stimuli
+    is_a: HarpDevice
+    slots:
+    - device_type
+    - name
+    - serial_number
+    - manufacturer
+    - model
+    - path_to_cad
+    - port_index
+    - additional_settings
+    - notes
+    - data_interface
+    - computer_name
+    - channels
+    - firmware_version
+    - hardware_version
+    - harp_device_type
+    - core_version
+    - tag_version
+    - is_clock_generator
+    class_uri: schema:Olfactometer
+  SoundCard:
+    name: SoundCard
+    description: Sound Card
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:SoundCard
+  Synchronizer:
+    name: Synchronizer
+    description: Synchronizer
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:Synchronizer
+  TimestampGeneratorGen1:
+    name: TimestampGeneratorGen1
+    description: Timestamp Generator Gen 1
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:TimestampGeneratorGen1
+  TimestampGeneratorGen3:
+    name: TimestampGeneratorGen3
+    description: Timestamp Generator Gen 3
+    is_a: _HarpDeviceType
+    slots:
+    - name
+    - whoami
+    class_uri: schema:TimestampGeneratorGen3
+  _HarpDeviceType:
+    name: _HarpDeviceType
+    description: Base model config
+    is_a: BaseModel
+    slots:
+    - name
+    - whoami
+    class_uri: schema:_HarpDeviceType
+  CallithrixJacchus:
+    name: CallithrixJacchus
+    description: Callithrix Jacchus
+    is_a: _Species
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:CallithrixJacchus
+  HomoSapiens:
+    name: HomoSapiens
+    description: Homo Sapiens
+    is_a: _Species
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:HomoSapiens
+  MacacaMulatta:
+    name: MacacaMulatta
+    description: Macaca Mulatta
+    is_a: _Species
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:MacacaMulatta
+  MusMusculus:
+    name: MusMusculus
+    description: Mus Musculus
+    is_a: _Species
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:MusMusculus
+  NationalCenterForBiotechnologyInformation:
+    name: NationalCenterForBiotechnologyInformation
+    description: NationalCenterForBiotechnologyInformation
+    is_a: _Registry
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:NationalCenterForBiotechnologyInformation
+  PIDName:
+    name: PIDName
+    description: "Model for associate a name with a persistent identifier (PID),\n\
+      \    the registry for that PID, and abbreviation for that registry"
+    is_a: BaseName
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:PIDName
+  RattusNorvegicus:
+    name: RattusNorvegicus
+    description: Rattus Norvegicus
+    is_a: _Species
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:RattusNorvegicus
+  _Species:
+    name: _Species
+    description: Base model config
+    is_a: PIDName
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:_Species
+  BaseName:
+    name: BaseName
+    description: A simple model associating a name with an abbreviation
+    is_a: AindModel
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:BaseName
+  Confocal:
+    name: Confocal
+    description: Confocal
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Confocal
+  Ecephys:
+    name: Ecephys
+    description: Ecephys
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Ecephys
+  ExaSpim:
+    name: ExaSpim
+    description: ExaSpim
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:ExaSpim
+  Fip:
+    name: Fip
+    description: Fip
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Fip
+  Hcr:
+    name: Hcr
+    description: Hcr
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Hcr
+  Hsfp:
+    name: Hsfp
+    description: Hsfp
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Hsfp
+  Isi:
+    name: Isi
+    description: Intrinsic signal imaging
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Isi
+  Merfish:
+    name: Merfish
+    description: Merfish
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Merfish
+  MesoSpim:
+    name: MesoSpim
+    description: MesoSpim
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:MesoSpim
+  Mri:
+    name: Mri
+    description: Mri
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Mri
+  MultiplaneOphys:
+    name: MultiplaneOphys
+    description: MulitplaneOphys
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:MultiplaneOphys
+  SingleplaneOphys:
+    name: SingleplaneOphys
+    description: SingleplaneOphys
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:SingleplaneOphys
+  Slap2:
+    name: Slap2
+    description: Slap2
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Slap2
+  SmartSpim:
+    name: SmartSpim
+    description: SmartSpim
+    is_a: _Platform
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:SmartSpim
+  _Platform:
+    name: _Platform
+    description: Base model config
+    is_a: BaseName
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:_Platform
   AdditionalImagingDevice:
     name: AdditionalImagingDevice
     description: Description of additional devices
@@ -1453,30 +2142,6 @@ classes:
     - immersion
     - objective_type
     class_uri: schema:Objective
-  Olfactometer:
-    name: Olfactometer
-    description: Description of an olfactometer for odor stimuli
-    is_a: HarpDevice
-    slots:
-    - device_type
-    - name
-    - serial_number
-    - manufacturer
-    - model
-    - path_to_cad
-    - port_index
-    - additional_settings
-    - notes
-    - data_interface
-    - computer_name
-    - channels
-    - firmware_version
-    - hardware_version
-    - harp_device_type
-    - core_version
-    - tag_version
-    - is_clock_generator
-    class_uri: schema:Olfactometer
   OlfactometerChannel:
     name: OlfactometerChannel
     description: description of a Olfactometer channel
@@ -1784,3 +2449,1067 @@ classes:
     - torque_sensor
     - torque_output
     class_uri: schema:Wheel
+  BehaviorStimulation:
+    name: BehaviorStimulation
+    description: Description of behavior parameters. Provides a high level description
+      of stimulus.
+    is_a: AindModel
+    slots:
+    - stimulus_type
+    - behavior_name
+    - session_number
+    - behavior_software
+    - behavior_script
+    - output_parameters
+    - reward_consumed_during_epoch
+    - reward_consumed_unit
+    - trials_total
+    - trials_finished
+    - trials_rewarded
+    - notes
+    class_uri: schema:BehaviorStimulation
+  OlfactometerChannelConfig:
+    name: OlfactometerChannelConfig
+    description: Description of olfactometer channel configurations
+    is_a: AindModel
+    slots:
+    - channel_index
+    - odorant
+    - odorant_dilution
+    - odorant_dilution_unit
+    class_uri: schema:OlfactometerChannelConfig
+  OlfactoryStimulation:
+    name: OlfactoryStimulation
+    description: Description of a olfactory stimulus
+    is_a: AindModel
+    slots:
+    - stimulus_type
+    - channels
+    class_uri: schema:OlfactoryStimulation
+  OptoStimulation:
+    name: OptoStimulation
+    description: Description of opto stimulation parameters
+    is_a: AindModel
+    slots:
+    - stimulus_type
+    - stimulus_name
+    - pulse_shape
+    - pulse_frequency
+    - pulse_frequency_unit
+    - number_pulse_trains
+    - pulse_width
+    - pulse_width_unit
+    - pulse_train_duration
+    - pulse_train_duration_unit
+    - fixed_pulse_train_interval
+    - pulse_train_interval
+    - pulse_train_interval_unit
+    - baseline_duration
+    - baseline_duration_unit
+    - other_parameters
+    - notes
+    class_uri: schema:OptoStimulation
+  PhotoStimulation:
+    name: PhotoStimulation
+    description: Description of a photostimulation session
+    is_a: AindModel
+    slots:
+    - stimulus_type
+    - stimulus_name
+    - number_groups
+    - groups
+    - inter_trial_interval
+    - inter_trial_interval_unit
+    - other_parameters
+    - notes
+    class_uri: schema:PhotoStimulation
+  PhotoStimulationGroup:
+    name: PhotoStimulationGroup
+    description: Description of a photostimulation group
+    is_a: AindModel
+    slots:
+    - group_index
+    - number_of_neurons
+    - stimulation_laser_power
+    - stimulation_laser_power_unit
+    - number_trials
+    - number_spirals
+    - spiral_duration
+    - spiral_duration_unit
+    - inter_spiral_interval
+    - inter_spiral_interval_unit
+    - other_parameters
+    - notes
+    class_uri: schema:PhotoStimulationGroup
+  StimulusEpoch:
+    name: StimulusEpoch
+    description: Description of stimulus used during session
+    is_a: AindModel
+    slots:
+    - stimulus
+    - stimulus_start_time
+    - stimulus_end_time
+    class_uri: schema:StimulusEpoch
+  VisualStimulation:
+    name: VisualStimulation
+    description: Description of visual stimulus parameters. Provides a high level
+      description of stimulus.
+    is_a: AindModel
+    slots:
+    - stimulus_type
+    - stimulus_name
+    - stimulus_parameters
+    - stimulus_template_name
+    - stimulus_software
+    - stimulus_software_version
+    - stimulus_script
+    - stimulus_script_version
+    - notes
+    class_uri: schema:VisualStimulation
+  Addgene:
+    name: Addgene
+    description: Addgene
+    is_a: _Registry
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Addgene
+  MouseGenomeInformatics:
+    name: MouseGenomeInformatics
+    description: MouseGenomeInformatics
+    is_a: _Registry
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:MouseGenomeInformatics
+  ResearchOrganizationRegistry:
+    name: ResearchOrganizationRegistry
+    description: ResearchOrganizationRegistry
+    is_a: _Registry
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:ResearchOrganizationRegistry
+  ResearchResourceIdentifiers:
+    name: ResearchResourceIdentifiers
+    description: ResearchResourceIdentifiers
+    is_a: _Registry
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:ResearchResourceIdentifiers
+  _Registry:
+    name: _Registry
+    description: Base model config
+    is_a: BaseName
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:_Registry
+  AngleValue:
+    name: AngleValue
+    description: None
+    is_a: BaseModel
+    slots:
+    - value
+    - unit
+    class_uri: schema:AngleValue
+  FrequencyValue:
+    name: FrequencyValue
+    description: None
+    is_a: BaseModel
+    slots:
+    - value
+    - unit
+    class_uri: schema:FrequencyValue
+  MassValue:
+    name: MassValue
+    description: None
+    is_a: BaseModel
+    slots:
+    - value
+    - unit
+    class_uri: schema:MassValue
+  PowerValue:
+    name: PowerValue
+    description: None
+    is_a: BaseModel
+    slots:
+    - value
+    - unit
+    class_uri: schema:PowerValue
+  SizeValue:
+    name: SizeValue
+    description: None
+    is_a: BaseModel
+    slots:
+    - value
+    - unit
+    class_uri: schema:SizeValue
+  TimeValue:
+    name: TimeValue
+    description: None
+    is_a: BaseModel
+    slots:
+    - value
+    - unit
+    class_uri: schema:TimeValue
+  VolumeValue:
+    name: VolumeValue
+    description: None
+    is_a: BaseModel
+    slots:
+    - value
+    - unit
+    class_uri: schema:VolumeValue
+  BehaviorVideos:
+    name: BehaviorVideos
+    description: BehaviorVideos
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:BehaviorVideos
+  Electromyography:
+    name: Electromyography
+    description: Electromyography
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Electromyography
+  Fib:
+    name: Fib
+    description: Fib
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Fib
+  Fmost:
+    name: Fmost
+    description: Fmost
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Fmost
+  Icephys:
+    name: Icephys
+    description: Icephys
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Icephys
+  POphys:
+    name: POphys
+    description: POphys
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:POphys
+  Slap:
+    name: Slap
+    description: Slap
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Slap
+  Spim:
+    name: Spim
+    description: Spim
+    is_a: _Modality
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:Spim
+  _Modality:
+    name: _Modality
+    description: Base model config
+    is_a: BaseName
+    slots:
+    - name
+    - abbreviation
+    class_uri: schema:_Modality
+  CcfCoords:
+    name: CcfCoords
+    description: Coordinates in CCF template space
+    is_a: AindModel
+    slots:
+    - ml
+    - ap
+    - dv
+    - unit
+    - ccf_version
+    class_uri: schema:CcfCoords
+  Coordinates3d:
+    name: Coordinates3d
+    description: Coordinates in a 3D grid
+    is_a: AindModel
+    slots:
+    - x
+    - y
+    - z
+    - unit
+    class_uri: schema:Coordinates3d
+  ModuleOrientation2d:
+    name: ModuleOrientation2d
+    description: 2D module orientation of an object
+    is_a: AindModel
+    slots:
+    - arc_angle
+    - module_angle
+    - unit
+    class_uri: schema:ModuleOrientation2d
+  ModuleOrientation3d:
+    name: ModuleOrientation3d
+    description: 3D module orientation of an object
+    is_a: AindModel
+    slots:
+    - arc_angle
+    - module_angle
+    - rotation_angle
+    - unit
+    class_uri: schema:ModuleOrientation3d
+  Orientation3d:
+    name: Orientation3d
+    description: 3D orientation of an object
+    is_a: AindModel
+    slots:
+    - pitch
+    - yaw
+    - roll
+    - unit
+    class_uri: schema:Orientation3d
+  Size2d:
+    name: Size2d
+    description: 2D size of an object
+    is_a: AindModel
+    slots:
+    - width
+    - height
+    - unit
+    class_uri: schema:Size2d
+  AAOptoElectronic:
+    name: AAOptoElectronic
+    description: AAOptoElectronic
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:AAOptoElectronic
+  Abcam:
+    name: Abcam
+    description: Abcam
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Abcam
+  AilipuTechnologyCo:
+    name: AilipuTechnologyCo
+    description: AilipuTechnologyCo
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:AilipuTechnologyCo
+  AllenInstitute:
+    name: AllenInstitute
+    description: AllenInstitute
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:AllenInstitute
+  AllenInstituteForBrainScience:
+    name: AllenInstituteForBrainScience
+    description: AllenInstituteForBrainScience
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:AllenInstituteForBrainScience
+  AllenInstituteForNeuralDynamics:
+    name: AllenInstituteForNeuralDynamics
+    description: AllenInstituteForNeuralDynamics
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:AllenInstituteForNeuralDynamics
+  Allied:
+    name: Allied
+    description: Allied
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Allied
+  AmsOsram:
+    name: AmsOsram
+    description: ams OSRAM
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:AmsOsram
+  AppliedScientificInstrumentation:
+    name: AppliedScientificInstrumentation
+    description: AppliedScientificInstrumentation
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:AppliedScientificInstrumentation
+  ArecontVisionCostar:
+    name: ArecontVisionCostar
+    description: ArecontVisionCostar
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:ArecontVisionCostar
+  Asus:
+    name: Asus
+    description: Asus
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Asus
+  Basler:
+    name: Basler
+    description: Basler
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Basler
+  CambridgeTechnology:
+    name: CambridgeTechnology
+    description: CambridgeTechnology
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:CambridgeTechnology
+  CarlZeiss:
+    name: CarlZeiss
+    description: CarlZeiss
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:CarlZeiss
+  ChampalimaudFoundation:
+    name: ChampalimaudFoundation
+    description: Champalimaud Foundation
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:ChampalimaudFoundation
+  Chroma:
+    name: Chroma
+    description: Chroma
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Chroma
+  CoherentScientific:
+    name: CoherentScientific
+    description: CoherentScientific
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:CoherentScientific
+  ColumbiaUniversity:
+    name: ColumbiaUniversity
+    description: ColumbiaUniversity
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:ColumbiaUniversity
+  Computar:
+    name: Computar
+    description: Computar
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Computar
+  Conoptics:
+    name: Conoptics
+    description: Conoptics
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Conoptics
+  Custom:
+    name: Custom
+    description: Custom
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Custom
+  Dodotronic:
+    name: Dodotronic
+    description: Dodotronic
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Dodotronic
+  Doric:
+    name: Doric
+    description: Doric
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Doric
+  Ealing:
+    name: Ealing
+    description: Ealing
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Ealing
+  EdmundOptics:
+    name: EdmundOptics
+    description: EdmundOptics
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:EdmundOptics
+  Euresys:
+    name: Euresys
+    description: Euresys
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Euresys
+  Fujinon:
+    name: Fujinon
+    description: Fujinon
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Fujinon
+  Hamamatsu:
+    name: Hamamatsu
+    description: Hamamatsu
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Hamamatsu
+  HuazhongUniversityOfScienceAndTechnology:
+    name: HuazhongUniversityOfScienceAndTechnology
+    description: HuazhongUniversityOfScienceAndTechnology
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:HuazhongUniversityOfScienceAndTechnology
+  IRRobotCo:
+    name: IRRobotCo
+    description: IRRobotCo
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:IRRobotCo
+  ISLProductsInternational:
+    name: ISLProductsInternational
+    description: ISLProductsInternational
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:ISLProductsInternational
+  InfinityPhotoOptical:
+    name: InfinityPhotoOptical
+    description: InfinityPhotoOptical
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:InfinityPhotoOptical
+  InteruniversityMicroelectronicsCenter:
+    name: InteruniversityMicroelectronicsCenter
+    description: InteruniversityMicroelectronicsCenter
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:InteruniversityMicroelectronicsCenter
+  JacksonLaboratory:
+    name: JacksonLaboratory
+    description: JacksonLaboratory
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:JacksonLaboratory
+  Julabo:
+    name: Julabo
+    description: Julabo
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Julabo
+  Leica:
+    name: Leica
+    description: Leica
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Leica
+  Lg:
+    name: Lg
+    description: Lg
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Lg
+  LifeCanvas:
+    name: LifeCanvas
+    description: LifeCanvas
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:LifeCanvas
+  MKSNewport:
+    name: MKSNewport
+    description: MKSNewport
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:MKSNewport
+  MeadowlarkOptics:
+    name: MeadowlarkOptics
+    description: MeadowlarkOptics
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:MeadowlarkOptics
+  Mitutuyo:
+    name: Mitutuyo
+    description: Mitutuyo
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Mitutuyo
+  Mpi:
+    name: Mpi
+    description: Mpi
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Mpi
+  NationalInstituteOfNeurologicalDisordersAndStroke:
+    name: NationalInstituteOfNeurologicalDisordersAndStroke
+    description: NationalInstituteOfNeurologicalDisordersAndStroke
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:NationalInstituteOfNeurologicalDisordersAndStroke
+  NationalInstruments:
+    name: NationalInstruments
+    description: NationalInstruments
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:NationalInstruments
+  Navitar:
+    name: Navitar
+    description: Navitar
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Navitar
+  NewScaleTechnologies:
+    name: NewScaleTechnologies
+    description: NewScaleTechnologies
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:NewScaleTechnologies
+  NewYorkUniversity:
+    name: NewYorkUniversity
+    description: NewYorkUniversity
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:NewYorkUniversity
+  Nikon:
+    name: Nikon
+    description: Nikon
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Nikon
+  Olympus:
+    name: Olympus
+    description: Olympus
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Olympus
+  OpenEphysProductionSite:
+    name: OpenEphysProductionSite
+    description: OpenEphysProductionSite
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:OpenEphysProductionSite
+  Optotune:
+    name: Optotune
+    description: Optotune
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Optotune
+  Other:
+    name: Other
+    description: Other
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Other
+  Oxxius:
+    name: Oxxius
+    description: Oxxius
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Oxxius
+  Prizmatix:
+    name: Prizmatix
+    description: Prizmatix
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Prizmatix
+  Quantifi:
+    name: Quantifi
+    description: Quantifi
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Quantifi
+  RaspberryPi:
+    name: RaspberryPi
+    description: RaspberryPi
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:RaspberryPi
+  SchneiderKreuznach:
+    name: SchneiderKreuznach
+    description: SchneiderKreuznach
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:SchneiderKreuznach
+  SecondOrderEffects:
+    name: SecondOrderEffects
+    description: Second Order Effects
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:SecondOrderEffects
+  Semrock:
+    name: Semrock
+    description: Semrock
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Semrock
+  SimonsFoundation:
+    name: SimonsFoundation
+    description: SimonsFoundation
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:SimonsFoundation
+  Spinnaker:
+    name: Spinnaker
+    description: Spinnaker
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Spinnaker
+  TMC:
+    name: TMC
+    description: TMC
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:TMC
+  Tamron:
+    name: Tamron
+    description: Tamron
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Tamron
+  TeledyneFLIR:
+    name: TeledyneFLIR
+    description: TeledyneFLIR
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:TeledyneFLIR
+  TheImagingSource:
+    name: TheImagingSource
+    description: TheImagingSource
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:TheImagingSource
+  TheLeeCompany:
+    name: TheLeeCompany
+    description: TheLeeCompany
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:TheLeeCompany
+  Thermofisher:
+    name: Thermofisher
+    description: Thermofisher
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Thermofisher
+  Thorlabs:
+    name: Thorlabs
+    description: Thorlabs
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Thorlabs
+  Tymphany:
+    name: Tymphany
+    description: Tymphany
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Tymphany
+  Vieworks:
+    name: Vieworks
+    description: Vieworks
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Vieworks
+  Vortran:
+    name: Vortran
+    description: Vortran
+    is_a: _Organization
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:Vortran
+  _Organization:
+    name: _Organization
+    description: Base model config
+    is_a: PIDName
+    slots:
+    - name
+    - abbreviation
+    - registry
+    - registry_identifier
+    class_uri: schema:_Organization
