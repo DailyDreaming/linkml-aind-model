@@ -66,7 +66,7 @@ def main(root_module_name: str = 'aind_data_schema'):
     sb = SchemaBuilder()
     populate_schema_builder_from_module(sb, module=root_module_name)
     yml = yaml_dumper.dumps(sb.schema)
-    with open('simple.yml', 'w') as f:
+    with open('generated_linkml_models/aind.yml', 'w') as f:
         f.write(yml)
     print('Success!')
 
