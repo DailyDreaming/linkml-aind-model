@@ -30,7 +30,7 @@ def populate_enum(sb: SchemaBuilder, enum_name: str, enum_object: enum.Enum):
                 name=enum_name,
                 permissible_values=dict(
                     (attribute, getattr(enum_object, attribute).value) for attribute in dir(enum_object) if
-                    not attribute.startswith('__'))
+                    not attribute.startswith('__') and isinstance(getattr(enum_object, attribute), enum.Enum))
             )
         )
     except ValueError as e:
