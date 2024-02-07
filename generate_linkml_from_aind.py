@@ -76,7 +76,7 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
 
 
 @app.command()
-def main(root_module_name: str = KNOWN_MODELS['andi'], output_file: Path = Path('generated_linkml_models/aind.yml')):
+def main(root_module_name: str = KNOWN_MODELS['aind'], output_file: Path = Path('generated_linkml_models/aind.yml')):
     org = 'dandi'
     sb = SchemaBuilder()
     populate_schema_builder_from_module(sb, module=root_module_name)
