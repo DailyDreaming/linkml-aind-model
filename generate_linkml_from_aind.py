@@ -1,13 +1,19 @@
+from pathlib import Path
+
 import importlib
 import pydantic
 import enum
 import inspect
+import typer
 
 from linkml_runtime import SchemaView
 from linkml_runtime.linkml_model import EnumDefinition
 from linkml_runtime.utils.schemaview import PermissibleValue, PermissibleValueText
 from linkml_runtime.utils.schema_builder import SchemaBuilder
 from linkml_runtime.dumpers import yaml_dumper
+
+
+app = typer.Typer()
 
 
 # BICAN already has linkml here: https://github.com/brain-bican/models/tree/main/linkml-schema
@@ -69,15 +75,16 @@ def populate_schema_builder_from_module(sb: SchemaBuilder, module: str):
                 populate_basemodel(sb, class_name, class_object)
 
 
-def main():
+@app.command()
+def main(root_module_name: str = KNOWN_MODELS['aind'], output_file: Path = Path('generated_linkml_models/aind.yml')):
     org = 'dandi'
     sb = SchemaBuilder()
-    populate_schema_builder_from_module(sb, module=KNOWN_MODELS[org])
+    populate_schema_builder_from_module(sb, module=root_module_name)
     yml = yaml_dumper.dumps(sb.schema)
-    with open(f'generated_linkml_models/{org}.yml', 'w') as f:
+    with output_file.open('w') as f:
         f.write(yml)
     print('Success!')
 
 
 if __name__ == '__main__':
-    main()
+    typer.run(main)
